@@ -59,7 +59,7 @@ namespace winUI
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             //cambiar el nombre del forma al cual se va a direccionar
-            formMenu newform = new formMenu();
+            formProveedores newform = new formProveedores();
             newform.Show();
             this.Hide();
         }

@@ -10,24 +10,15 @@ using System.Windows.Forms;
 
 using BLL; //invocar logica de negocio
 
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
-
 namespace winUI
 {
-    public partial class formPersona : Form
+    public partial class formProveedores : Form
     {
-        ClassLogicaPersona Logica = new ClassLogicaPersona(); //se crea un objeto 
-        public formPersona()
+        ClassLogicaProveedor Logica = new ClassLogicaProveedor(); //se crea un objeto 
+        public formProveedores()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = Logica.ListarPersonas(); //carga los datos
-            dataGridView1.Refresh();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -40,15 +31,21 @@ namespace winUI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             string respuesta = "";
-            respuesta = Logica.NewPersona(tbNombre.Text, tbApellido.Text, tbDireccion.Text, int.Parse(tbTelefono.Text), tbCorreo.Text);
+            respuesta = Logica.NewProveedor(tbNombre.Text, tbDireccion.Text, int.Parse(tbTelefono.Text), tbCorreo.Text);
             MessageBox.Show(respuesta);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string respuesta = "";
-            respuesta = Logica.editPersona(tbNombre.Text, tbApellido.Text, tbDireccion.Text, int.Parse(tbTelefono.Text), tbCorreo.Text, int.Parse(label1.Text));
+            respuesta = Logica.editProveedor(tbNombre.Text, tbDireccion.Text, int.Parse(tbTelefono.Text), tbCorreo.Text, int.Parse(label1.Text));
             MessageBox.Show(respuesta);
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Logica.ListarProveedores(); //carga los datos
+            dataGridView1.Refresh();
         }
 
         private void btnInhabilitar_Click(object sender, EventArgs e)
@@ -75,10 +72,9 @@ namespace winUI
                 this.label4.Visible = true;
                 label1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 tbNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                tbApellido.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                tbDireccion.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                tbTelefono.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                tbCorreo.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                tbDireccion.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tbTelefono.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                tbCorreo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
 
                 btnActualizar.Enabled = true;
                 btnGrabar.Enabled = false;

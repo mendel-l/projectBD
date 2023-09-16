@@ -40,7 +40,7 @@ namespace BLL
         /// <param name="numeroCelular"> refire al telefono de la persona </param>
         /// <param name="correoElectronico"> refire al correo de la persona </param>
         /// <returns></returns>
-        public string NuevaPersona(string Nombre, string Apellido, string Direccion, int numeroCelular, string correoElectronico)
+        public string NewPersona(string Nombre, string Apellido, string Direccion, int numeroCelular, string correoElectronico)
         {
             int existe;
             existe = Convert.ToInt32(PERSONA.ScalarQueryExisteNombrePersona(Nombre));
@@ -53,16 +53,16 @@ namespace BLL
             }
         }
 
-        public string editarPersona(string Nombre, string Apellido, string Direccion, int numeroCelular, string correoElectronico, int IDpersona)
+        public string editPersona(string Nombre, string Apellido, string Direccion, int numeroCelular, string correoElectronico, int IDpersona)
         {
             int existe;
             existe = Convert.ToInt32(PERSONA.ScalarQueryExisteNombrePersona(Nombre));
             if (existe > 1)
-                return "Error: la editorial " + Nombre + " ya existe previamente";
+                return "Error: el nombre: " + Nombre + " ya existe previamente";
             else
             {
                 PERSONA.UpdateQueryPersona(Nombre, Apellido, Direccion, Convert.ToInt32(numeroCelular), correoElectronico, IDpersona);
-                return "Se editó la editorial con registro: " + Nombre;
+                return "Se editó la tabla Persona con registro id: " + IDpersona;
             }
         }
     }

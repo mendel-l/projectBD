@@ -15,6 +15,7 @@ namespace winUI
         public formCrearUsuario()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnAnadir_Click(object sender, EventArgs e)
