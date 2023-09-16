@@ -70,6 +70,7 @@
             this.tbConfPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbConfPass.Location = new System.Drawing.Point(246, 120);
             this.tbConfPass.Name = "tbConfPass";
+            this.tbConfPass.PasswordChar = '*';
             this.tbConfPass.Size = new System.Drawing.Size(169, 26);
             this.tbConfPass.TabIndex = 18;
             // 
@@ -86,6 +87,7 @@
             this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPass.Location = new System.Drawing.Point(246, 80);
             this.tbPass.Name = "tbPass";
+            this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(169, 26);
             this.tbPass.TabIndex = 15;
             // 
