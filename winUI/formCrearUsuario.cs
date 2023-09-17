@@ -34,6 +34,7 @@ namespace winUI
 
             int.TryParse(idpersona, out IDP);
             int.TryParse(idrol, out IDROL);
+
             if (Contras==cContra) {
                 string USRcreado = autentication.crearUsuario(Usuario, Contras, IDP, IDROL);
                 if (USRcreado.Contains("Existe"))

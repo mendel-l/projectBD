@@ -37,7 +37,9 @@ namespace BLL
                 {
                     string savedHash = userData.Rows[0][2].ToString();
                     string sal = userData.Rows[0][5].ToString();
+                    string noRepID = userData.Rows[0][4].ToString();
                     string generateHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
+
                     if (generateHash == savedHash)
                     {
 
@@ -63,21 +65,38 @@ namespace BLL
 
         public string crearUsuario(string usuario, string password, int idPersona, int idRol)
         {
-            int existe;
-            existe=Convert.ToInt32(Usuario.ScalarQuery(usuario));
-            if (existe > 0)
-                return "Existe";
-            else
+            var userData = Usuario.GetDataID(idPersona);
+            var userData2 = Usuario.GetDataUser(usuario);
+
+            try
             {
-                string sal = BCrypt.Net.BCrypt.GenerateSalt();
-                string passwordHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
-                Usuario.InsertQuery1(usuario, passwordHash, idRol, idPersona, sal);
-                return "Usuario Registrado Exitosamente";
+                
+                    if (userData.Rows.Count > 0)
+                    {
+                        return "Existe";
+                    }
+                    else
+                    {
+                        string sal = BCrypt.Net.BCrypt.GenerateSalt();
+                        string passwordHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
+                        Usuario.InsertQuery1(usuario, passwordHash, idRol, idPersona, sal);
+                        return "Usuario Registrado Exitosamente";
+
+                    }
+                
+
+
             }
+            catch (Exception error)
+            {
+                return "Invalido:" + error.ToString();
+            }
+
         }
 
 
 
 
     }
+
 }

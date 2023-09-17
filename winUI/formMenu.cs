@@ -43,7 +43,7 @@ namespace winUI
         private void btnPago_Click(object sender, EventArgs e)
         {
             //cambiar el nombre del forma al cual se va a direccionar
-            formMenu newform = new formMenu();
+           Pago newform = new Pago();
             newform.Show();
             this.Hide();
         }

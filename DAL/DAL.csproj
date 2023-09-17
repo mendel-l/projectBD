@@ -52,6 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetCategoria.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetPago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPago.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetPersona.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +94,17 @@
     </None>
     <None Include="DataSetCategoria.xss">
       <DependentUpon>DataSetCategoria.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPago.xsc">
+      <DependentUpon>DataSetPago.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPago.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPago.xss">
+      <DependentUpon>DataSetPago.xsd</DependentUpon>
     </None>
     <None Include="DataSetPersona.xsc">
       <DependentUpon>DataSetPersona.xsd</DependentUpon>
