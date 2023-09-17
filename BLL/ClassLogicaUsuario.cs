@@ -77,10 +77,16 @@ namespace BLL
                     }
                     else
                     {
+                    if (userData2.Rows.Count > 0) {
                         string sal = BCrypt.Net.BCrypt.GenerateSalt();
                         string passwordHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
                         Usuario.InsertQuery1(usuario, passwordHash, idRol, idPersona, sal);
                         return "Usuario Registrado Exitosamente";
+                    }
+                    else
+                    {
+                        return "Existe";
+                    }
 
                     }
                 
