@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassLogicaCategoria.cs" />
     <Compile Include="ClassLogicaPersona.cs" />
     <Compile Include="ClassLogicaProveedor.cs" />
     <Compile Include="ClassLogicaUsuario.cs" />

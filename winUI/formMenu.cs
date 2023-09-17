@@ -50,8 +50,8 @@ namespace winUI
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            //cambiar el nombre del forma al cual se va a direccionar
-            formMenu newform = new formMenu();
+          
+            formCategoria newform = new formCategoria();
             newform.Show();
             this.Hide();
         }

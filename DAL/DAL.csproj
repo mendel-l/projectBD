@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetCategoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCategoria.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetPersona.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +79,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DataSetCategoria.xsc">
+      <DependentUpon>DataSetCategoria.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCategoria.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCategoria.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCategoria.xss">
+      <DependentUpon>DataSetCategoria.xsd</DependentUpon>
+    </None>
     <None Include="DataSetPersona.xsc">
       <DependentUpon>DataSetPersona.xsd</DependentUpon>
     </None>
