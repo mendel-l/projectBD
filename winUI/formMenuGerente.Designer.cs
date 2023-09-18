@@ -69,6 +69,7 @@
             this.btnSalir.TabIndex = 69;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCerrarS
             // 
@@ -81,6 +82,7 @@
             this.btnCerrarS.TabIndex = 68;
             this.btnCerrarS.Text = "Cerrar Sesion";
             this.btnCerrarS.UseVisualStyleBackColor = false;
+            this.btnCerrarS.Click += new System.EventHandler(this.btnCerrarS_Click);
             // 
             // formMenuGerente
             // 

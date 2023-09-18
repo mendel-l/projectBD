@@ -17,5 +17,17 @@ namespace winUI
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void btnCerrarS_Click(object sender, EventArgs e)
+        {
+            Form1 newform = new Form1();
+            newform.Show();
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
