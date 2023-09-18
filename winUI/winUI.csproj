@@ -76,6 +76,30 @@
     <Compile Include="formMenu.Designer.cs">
       <DependentUpon>formMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="formMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMenuAdmin.Designer.cs">
+      <DependentUpon>formMenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMenuBodeguero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMenuBodeguero.Designer.cs">
+      <DependentUpon>formMenuBodeguero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMenuCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMenuCajero.Designer.cs">
+      <DependentUpon>formMenuCajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMenuGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMenuGerente.Designer.cs">
+      <DependentUpon>formMenuGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="formPersona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +137,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMenuAdmin.resx">
+      <DependentUpon>formMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMenuBodeguero.resx">
+      <DependentUpon>formMenuBodeguero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMenuCajero.resx">
+      <DependentUpon>formMenuCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMenuGerente.resx">
+      <DependentUpon>formMenuGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formPersona.resx">
       <DependentUpon>formPersona.cs</DependentUpon>

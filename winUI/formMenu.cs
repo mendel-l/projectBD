@@ -48,7 +48,6 @@ namespace winUI
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-          
             formCategoria newform = new formCategoria();
             newform.Show();
             this.Hide();
