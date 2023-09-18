@@ -48,6 +48,7 @@
     <Compile Include="ClassLogicaPago.cs" />
     <Compile Include="ClassLogicaPersona.cs" />
     <Compile Include="ClassLogicaProveedor.cs" />
+    <Compile Include="ClassLogicaRol.cs" />
     <Compile Include="ClassLogicaUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

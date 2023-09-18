@@ -1,6 +1,6 @@
 ﻿namespace winUI
 {
-    partial class Pago
+    partial class formRol
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Idcate = new System.Windows.Forms.Label();
-            this.Marca = new System.Windows.Forms.Label();
-            this.tbPago = new System.Windows.Forms.TextBox();
+            this.cbNombreRol = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbNombre = new System.Windows.Forms.TextBox();
             this.btnInhabilitar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
@@ -42,85 +45,125 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(592, 559);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(130, 40);
+            this.btnRegresar.TabIndex = 27;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(12, 559);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(130, 40);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Idcate);
-            this.groupBox1.Controls.Add(this.Marca);
-            this.groupBox1.Controls.Add(this.tbPago);
+            this.groupBox1.Controls.Add(this.cbNombreRol);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(172, 9);
+            this.groupBox1.Location = new System.Drawing.Point(126, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(489, 197);
-            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Categoria";
+            this.groupBox1.Text = "groupBox1";
             // 
-            // Idcate
+            // cbNombreRol
             // 
-            this.Idcate.AutoSize = true;
-            this.Idcate.Location = new System.Drawing.Point(417, 74);
-            this.Idcate.Name = "Idcate";
-            this.Idcate.Size = new System.Drawing.Size(35, 13);
-            this.Idcate.TabIndex = 12;
-            this.Idcate.Text = "label1";
+            this.cbNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNombreRol.FormattingEnabled = true;
+            this.cbNombreRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Bodeguero",
+            "Cajero",
+            "Gerente"});
+            this.cbNombreRol.Location = new System.Drawing.Point(157, 101);
+            this.cbNombreRol.Name = "cbNombreRol";
+            this.cbNombreRol.Size = new System.Drawing.Size(223, 28);
+            this.cbNombreRol.TabIndex = 28;
             // 
-            // Marca
+            // label1
             // 
-            this.Marca.AutoSize = true;
-            this.Marca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Marca.Location = new System.Drawing.Point(68, 64);
-            this.Marca.Name = "Marca";
-            this.Marca.Size = new System.Drawing.Size(67, 16);
-            this.Marca.TabIndex = 5;
-            this.Marca.Text = "TipoPago";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(427, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
             // 
-            // tbPago
+            // label2
             // 
-            this.tbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPago.Location = new System.Drawing.Point(167, 61);
-            this.tbPago.Name = "tbPago";
-            this.tbPago.Size = new System.Drawing.Size(223, 26);
-            this.tbPago.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "NombreRol";
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombre.Location = new System.Drawing.Point(157, 67);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(223, 26);
+            this.tbNombre.TabIndex = 2;
             // 
             // btnInhabilitar
             // 
             this.btnInhabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInhabilitar.Location = new System.Drawing.Point(624, 229);
+            this.btnInhabilitar.Location = new System.Drawing.Point(578, 250);
             this.btnInhabilitar.Name = "btnInhabilitar";
             this.btnInhabilitar.Size = new System.Drawing.Size(115, 40);
-            this.btnInhabilitar.TabIndex = 31;
+            this.btnInhabilitar.TabIndex = 24;
             this.btnInhabilitar.Text = "Eliminar";
             this.btnInhabilitar.UseVisualStyleBackColor = true;
+            this.btnInhabilitar.Click += new System.EventHandler(this.btnInhabilitar_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.Enabled = false;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(360, 229);
+            this.btnActualizar.Location = new System.Drawing.Point(314, 250);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(115, 40);
-            this.btnActualizar.TabIndex = 30;
+            this.btnActualizar.TabIndex = 23;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnGrabar
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(229, 229);
+            this.btnGrabar.Location = new System.Drawing.Point(183, 250);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(115, 40);
-            this.btnGrabar.TabIndex = 29;
+            this.btnGrabar.TabIndex = 22;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(98, 229);
+            this.btnNuevo.Location = new System.Drawing.Point(52, 250);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(115, 40);
-            this.btnNuevo.TabIndex = 28;
+            this.btnNuevo.TabIndex = 21;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -128,27 +171,30 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(172, 287);
+            this.dataGridView1.Location = new System.Drawing.Point(126, 308);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(489, 215);
-            this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(492, 229);
+            this.btnListar.Location = new System.Drawing.Point(446, 250);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(115, 40);
-            this.btnListar.TabIndex = 26;
+            this.btnListar.TabIndex = 19;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // Pago
+            // formRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 534);
+            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnInhabilitar);
             this.Controls.Add(this.btnActualizar);
@@ -156,8 +202,8 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnListar);
-            this.Name = "Pago";
-            this.Text = "Pago";
+            this.Name = "formRol";
+            this.Text = "formRol";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -167,15 +213,18 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label Idcate;
-        private System.Windows.Forms.Label Marca;
-        private System.Windows.Forms.TextBox tbPago;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Button btnInhabilitar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.ComboBox cbNombreRol;
     }
 }

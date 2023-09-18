@@ -67,6 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProveedor.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetRol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRol.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetUsuario.cs">
       <DependentUpon>DataSetUsuario.xsd</DependentUpon>
     </Compile>
@@ -127,6 +132,17 @@
     </None>
     <None Include="DataSetProveedor.xss">
       <DependentUpon>DataSetProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRol.xsc">
+      <DependentUpon>DataSetRol.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRol.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRol.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRol.xss">
+      <DependentUpon>DataSetRol.xsd</DependentUpon>
     </None>
     <None Include="DataSetUsuario.xsc">
       <DependentUpon>DataSetUsuario.xsd</DependentUpon>

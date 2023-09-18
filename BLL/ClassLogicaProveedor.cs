@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using DAL.DataSetPersonaTableAdapters; //usa el DAL
 using System.Data; //usa el DATA TABLE
-using DAL.DataSetProveedorTableAdapters;
+using DAL.DataSetProveedorTableAdapters;//usa el DAL
 
 namespace BLL
 {

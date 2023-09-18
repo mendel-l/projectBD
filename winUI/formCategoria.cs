@@ -18,6 +18,8 @@ namespace winUI
         public formCategoria()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnListar_Click(object sender, EventArgs e)

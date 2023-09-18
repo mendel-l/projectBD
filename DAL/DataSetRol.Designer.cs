@@ -20,17 +20,17 @@ namespace DAL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetPago")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetRol")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetPago : global::System.Data.DataSet {
+    public partial class DataSetRol : global::System.Data.DataSet {
         
-        private PagoDataTable tablePago;
+        private RolDataTable tableRol;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataSetPago() {
+        public DataSetRol() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DAL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DataSetPago(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetRol(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DAL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Pago"] != null)) {
-                    base.Tables.Add(new PagoDataTable(ds.Tables["Pago"]));
+                if ((ds.Tables["Rol"] != null)) {
+                    base.Tables.Add(new RolDataTable(ds.Tables["Rol"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DAL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PagoDataTable Pago {
+        public RolDataTable Rol {
             get {
-                return this.tablePago;
+                return this.tableRol;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetPago cln = ((DataSetPago)(base.Clone()));
+            DataSetRol cln = ((DataSetRol)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DAL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Pago"] != null)) {
-                    base.Tables.Add(new PagoDataTable(ds.Tables["Pago"]));
+                if ((ds.Tables["Rol"] != null)) {
+                    base.Tables.Add(new RolDataTable(ds.Tables["Rol"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePago = ((PagoDataTable)(base.Tables["Pago"]));
+            this.tableRol = ((RolDataTable)(base.Tables["Rol"]));
             if ((initTable == true)) {
-                if ((this.tablePago != null)) {
-                    this.tablePago.InitVars();
+                if ((this.tableRol != null)) {
+                    this.tableRol.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetPago";
+            this.DataSetName = "DataSetRol";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetPago.xsd";
+            this.Namespace = "http://tempuri.org/DataSetRol.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePago = new PagoDataTable();
-            base.Tables.Add(this.tablePago);
+            this.tableRol = new RolDataTable();
+            base.Tables.Add(this.tableRol);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializePago() {
+        private bool ShouldSerializeRol() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DAL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetPago ds = new DataSetPago();
+            DataSetRol ds = new DataSetRol();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,23 @@ namespace DAL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void PagoRowChangeEventHandler(object sender, PagoRowChangeEvent e);
+        public delegate void RolRowChangeEventHandler(object sender, RolRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PagoDataTable : global::System.Data.TypedTableBase<PagoRow> {
+        public partial class RolDataTable : global::System.Data.TypedTableBase<RolRow> {
             
-            private global::System.Data.DataColumn _column_IDpago;
+            private global::System.Data.DataColumn columnIDrol;
             
-            private global::System.Data.DataColumn columntipoPago;
+            private global::System.Data.DataColumn columnnombreRol;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoDataTable() {
-                this.TableName = "Pago";
+            public RolDataTable() {
+                this.TableName = "Rol";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PagoDataTable(global::System.Data.DataTable table) {
+            internal RolDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +311,24 @@ namespace DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected PagoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RolDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn @__IDpagoColumn {
+            public global::System.Data.DataColumn IDrolColumn {
                 get {
-                    return this._column_IDpago;
+                    return this.columnIDrol;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn tipoPagoColumn {
+            public global::System.Data.DataColumn nombreRolColumn {
                 get {
-                    return this.columntipoPago;
+                    return this.columnnombreRol;
                 }
             }
             
@@ -343,53 +343,53 @@ namespace DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoRow this[int index] {
+            public RolRow this[int index] {
                 get {
-                    return ((PagoRow)(this.Rows[index]));
+                    return ((RolRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PagoRowChangeEventHandler PagoRowChanging;
+            public event RolRowChangeEventHandler RolRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PagoRowChangeEventHandler PagoRowChanged;
+            public event RolRowChangeEventHandler RolRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PagoRowChangeEventHandler PagoRowDeleting;
+            public event RolRowChangeEventHandler RolRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PagoRowChangeEventHandler PagoRowDeleted;
+            public event RolRowChangeEventHandler RolRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddPagoRow(PagoRow row) {
+            public void AddRolRow(RolRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoRow AddPagoRow(string tipoPago) {
-                PagoRow rowPagoRow = ((PagoRow)(this.NewRow()));
+            public RolRow AddRolRow(string nombreRol) {
+                RolRow rowRolRow = ((RolRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        tipoPago};
-                rowPagoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPagoRow);
-                return rowPagoRow;
+                        nombreRol};
+                rowRolRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRolRow);
+                return rowRolRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoRow FindBy__IDpago(int @__IDpago) {
-                return ((PagoRow)(this.Rows.Find(new object[] {
-                            @__IDpago})));
+            public RolRow FindByIDrol(int IDrol) {
+                return ((RolRow)(this.Rows.Find(new object[] {
+                            IDrol})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PagoDataTable cln = ((PagoDataTable)(base.Clone()));
+                RolDataTable cln = ((RolDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,60 +397,59 @@ namespace DAL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PagoDataTable();
+                return new RolDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this._column_IDpago = base.Columns["⁯IDpago"];
-                this.columntipoPago = base.Columns["tipoPago"];
+                this.columnIDrol = base.Columns["IDrol"];
+                this.columnnombreRol = base.Columns["nombreRol"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this._column_IDpago = new global::System.Data.DataColumn("⁯IDpago", typeof(int), null, global::System.Data.MappingType.Element);
-                this._column_IDpago.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column_IDpago");
-                this._column_IDpago.ExtendedProperties.Add("Generator_UserColumnName", "⁯IDpago");
-                base.Columns.Add(this._column_IDpago);
-                this.columntipoPago = new global::System.Data.DataColumn("tipoPago", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipoPago);
+                this.columnIDrol = new global::System.Data.DataColumn("IDrol", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDrol);
+                this.columnnombreRol = new global::System.Data.DataColumn("nombreRol", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreRol);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this._column_IDpago}, true));
-                this._column_IDpago.AutoIncrement = true;
-                this._column_IDpago.AutoIncrementSeed = -1;
-                this._column_IDpago.AutoIncrementStep = -1;
-                this._column_IDpago.AllowDBNull = false;
-                this._column_IDpago.ReadOnly = true;
-                this._column_IDpago.Unique = true;
-                this.columntipoPago.MaxLength = 140;
+                                this.columnIDrol}, true));
+                this.columnIDrol.AutoIncrement = true;
+                this.columnIDrol.AutoIncrementSeed = -1;
+                this.columnIDrol.AutoIncrementStep = -1;
+                this.columnIDrol.AllowDBNull = false;
+                this.columnIDrol.ReadOnly = true;
+                this.columnIDrol.Unique = true;
+                this.columnnombreRol.AllowDBNull = false;
+                this.columnnombreRol.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoRow NewPagoRow() {
-                return ((PagoRow)(this.NewRow()));
+            public RolRow NewRolRow() {
+                return ((RolRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PagoRow(builder);
+                return new RolRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PagoRow);
+                return typeof(RolRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PagoRowChanged != null)) {
-                    this.PagoRowChanged(this, new PagoRowChangeEvent(((PagoRow)(e.Row)), e.Action));
+                if ((this.RolRowChanged != null)) {
+                    this.RolRowChanged(this, new RolRowChangeEvent(((RolRow)(e.Row)), e.Action));
                 }
             }
             
@@ -458,8 +457,8 @@ namespace DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PagoRowChanging != null)) {
-                    this.PagoRowChanging(this, new PagoRowChangeEvent(((PagoRow)(e.Row)), e.Action));
+                if ((this.RolRowChanging != null)) {
+                    this.RolRowChanging(this, new RolRowChangeEvent(((RolRow)(e.Row)), e.Action));
                 }
             }
             
@@ -467,8 +466,8 @@ namespace DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PagoRowDeleted != null)) {
-                    this.PagoRowDeleted(this, new PagoRowChangeEvent(((PagoRow)(e.Row)), e.Action));
+                if ((this.RolRowDeleted != null)) {
+                    this.RolRowDeleted(this, new RolRowChangeEvent(((RolRow)(e.Row)), e.Action));
                 }
             }
             
@@ -476,14 +475,14 @@ namespace DAL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PagoRowDeleting != null)) {
-                    this.PagoRowDeleting(this, new PagoRowChangeEvent(((PagoRow)(e.Row)), e.Action));
+                if ((this.RolRowDeleting != null)) {
+                    this.RolRowDeleting(this, new RolRowChangeEvent(((RolRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovePagoRow(PagoRow row) {
+            public void RemoveRolRow(RolRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -492,7 +491,7 @@ namespace DAL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetPago ds = new DataSetPago();
+                DataSetRol ds = new DataSetRol();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -510,7 +509,7 @@ namespace DAL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PagoDataTable";
+                attribute2.FixedValue = "RolDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -554,54 +553,37 @@ namespace DAL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PagoRow : global::System.Data.DataRow {
+        public partial class RolRow : global::System.Data.DataRow {
             
-            private PagoDataTable tablePago;
+            private RolDataTable tableRol;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PagoRow(global::System.Data.DataRowBuilder rb) : 
+            internal RolRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePago = ((PagoDataTable)(this.Table));
+                this.tableRol = ((RolDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int @__IDpago {
+            public int IDrol {
                 get {
-                    return ((int)(this[this.tablePago.@__IDpagoColumn]));
+                    return ((int)(this[this.tableRol.IDrolColumn]));
                 }
                 set {
-                    this[this.tablePago.@__IDpagoColumn] = value;
+                    this[this.tableRol.IDrolColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string tipoPago {
+            public string nombreRol {
                 get {
-                    try {
-                        return ((string)(this[this.tablePago.tipoPagoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipoPago\' de la tabla \'Pago\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tableRol.nombreRolColumn]));
                 }
                 set {
-                    this[this.tablePago.tipoPagoColumn] = value;
+                    this[this.tableRol.nombreRolColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IstipoPagoNull() {
-                return this.IsNull(this.tablePago.tipoPagoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SettipoPagoNull() {
-                this[this.tablePago.tipoPagoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -609,22 +591,22 @@ namespace DAL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class PagoRowChangeEvent : global::System.EventArgs {
+        public class RolRowChangeEvent : global::System.EventArgs {
             
-            private PagoRow eventRow;
+            private RolRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoRowChangeEvent(PagoRow row, global::System.Data.DataRowAction action) {
+            public RolRowChangeEvent(RolRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagoRow Row {
+            public RolRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -640,7 +622,7 @@ namespace DAL {
         }
     }
 }
-namespace DAL.DataSetPagoTableAdapters {
+namespace DAL.DataSetRolTableAdapters {
     
     
     /// <summary>
@@ -652,7 +634,7 @@ namespace DAL.DataSetPagoTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PagoTableAdapter : global::System.ComponentModel.Component {
+    public partial class RolTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -666,7 +648,7 @@ namespace DAL.DataSetPagoTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PagoTableAdapter() {
+        public RolTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -763,35 +745,33 @@ namespace DAL.DataSetPagoTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Pago";
-            tableMapping.ColumnMappings.Add("⁯IDpago", "⁯IDpago");
-            tableMapping.ColumnMappings.Add("tipoPago", "tipoPago");
+            tableMapping.DataSetTable = "Rol";
+            tableMapping.ColumnMappings.Add("IDrol", "IDrol");
+            tableMapping.ColumnMappings.Add("nombreRol", "nombreRol");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Pago] WHERE (([⁯IDpago] = @p2) AND ((@IsNull_tipoPago = 1 AND [tipoP" +
-                "ago] IS NULL) OR ([tipoPago] = @Original_tipoPago)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Rol] WHERE (([IDrol] = @Original_IDrol) AND ([nombreRol] = @Original" +
+                "_nombreRol))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "⁯IDpago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tipoPago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoPago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDrol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDrol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombreRol", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreRol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Pago] ([tipoPago]) VALUES (@tipoPago);\r\nSELECT [⁯IDpago], tipoPago F" +
-                "ROM Pago WHERE ([⁯IDpago] = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Rol] ([nombreRol]) VALUES (@nombreRol);\r\nSELECT IDrol, nombreRol FRO" +
+                "M Rol WHERE (IDrol = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoPago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreRol", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreRol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Pago] SET [tipoPago] = @tipoPago WHERE (([⁯IDpago] = @p2) AND ((@IsNull_t" +
-                "ipoPago = 1 AND [tipoPago] IS NULL) OR ([tipoPago] = @Original_tipoPago)));\r\nSEL" +
-                "ECT [⁯IDpago], tipoPago FROM Pago WHERE ([⁯IDpago] = @_IDpago)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Rol] SET [nombreRol] = @nombreRol WHERE (([IDrol] = @Original_IDrol) AND " +
+                "([nombreRol] = @Original_nombreRol));\r\nSELECT IDrol, nombreRol FROM Rol WHERE (I" +
+                "Drol = @IDrol)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoPago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "⁯IDpago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tipoPago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoPago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@_IDpago", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "⁯IDpago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreRol", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreRol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDrol", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDrol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombreRol", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreRol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDrol", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDrol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -807,33 +787,32 @@ namespace DAL.DataSetPagoTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Pago.*\r\nFROM            Pago";
+            this._commandCollection[0].CommandText = "SELECT        IDrol, nombreRol\r\nFROM            Rol";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO Pago\r\n                         (tipoPago)\r\nVALUES        (@tipoPago)";
+            this._commandCollection[1].CommandText = "INSERT INTO [Rol] ([nombreRol]) VALUES (@nombreRol)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoPago", global::System.Data.SqlDbType.VarChar, 140, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreRol", global::System.Data.SqlDbType.VarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "nombreRol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM Pago";
+            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM Rol";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       Pago\r\nSET                tipoPago = @tipoPago\r\nWHERE        ([⁯IDpag" +
-                "o] = @IDpago)";
+            this._commandCollection[3].CommandText = "UPDATE [Rol] \r\nSET [nombreRol] = @nombreRol \r\nWHERE ([IDrol] = @Original_IDrol)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoPago", global::System.Data.SqlDbType.VarChar, 140, global::System.Data.ParameterDirection.Input, 0, 0, "tipoPago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDpago", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "⁯IDpago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreRol", global::System.Data.SqlDbType.VarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "nombreRol", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDrol", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDrol", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetPago.PagoDataTable GetDataPago() {
+        public virtual DataSetRol.RolDataTable GetDataRol() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetPago.PagoDataTable dataTable = new DataSetPago.PagoDataTable();
+            DataSetRol.RolDataTable dataTable = new DataSetRol.RolDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -841,15 +820,15 @@ namespace DAL.DataSetPagoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetPago.PagoDataTable dataTable) {
+        public virtual int Update(DataSetRol.RolDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetPago dataSet) {
-            return this.Adapter.Update(dataSet, "Pago");
+        public virtual int Update(DataSetRol dataSet) {
+            return this.Adapter.Update(dataSet, "Rol");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -871,13 +850,13 @@ namespace DAL.DataSetPagoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQueryPago(string tipoPago) {
+        public virtual int InsertQueryRol(string nombreRol) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((tipoPago == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
+            if ((nombreRol == null)) {
+                throw new global::System.ArgumentNullException("nombreRol");
             }
             else {
-                command.Parameters[0].Value = ((string)(tipoPago));
+                command.Parameters[0].Value = ((string)(nombreRol));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -899,7 +878,7 @@ namespace DAL.DataSetPagoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> ScalarQueryPago() {
+        public virtual global::System.Nullable<int> ScalarQueryRol() {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -928,15 +907,15 @@ namespace DAL.DataSetPagoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQueryPago(string tipoPago, int IDpago) {
+        public virtual int UpdateQueryRol(string nombreRol, int Original_IDrol) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            if ((tipoPago == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
+            if ((nombreRol == null)) {
+                throw new global::System.ArgumentNullException("nombreRol");
             }
             else {
-                command.Parameters[0].Value = ((string)(tipoPago));
+                command.Parameters[0].Value = ((string)(nombreRol));
             }
-            command.Parameters[1].Value = ((int)(IDpago));
+            command.Parameters[1].Value = ((int)(Original_IDrol));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -967,7 +946,7 @@ namespace DAL.DataSetPagoTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private PagoTableAdapter _pagoTableAdapter;
+        private RolTableAdapter _rolTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -989,12 +968,12 @@ namespace DAL.DataSetPagoTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public PagoTableAdapter PagoTableAdapter {
+        public RolTableAdapter RolTableAdapter {
             get {
-                return this._pagoTableAdapter;
+                return this._rolTableAdapter;
             }
             set {
-                this._pagoTableAdapter = value;
+                this._rolTableAdapter = value;
             }
         }
         
@@ -1017,9 +996,9 @@ namespace DAL.DataSetPagoTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._pagoTableAdapter != null) 
-                            && (this._pagoTableAdapter.Connection != null))) {
-                    return this._pagoTableAdapter.Connection;
+                if (((this._rolTableAdapter != null) 
+                            && (this._rolTableAdapter.Connection != null))) {
+                    return this._rolTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1034,7 +1013,7 @@ namespace DAL.DataSetPagoTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._pagoTableAdapter != null)) {
+                if ((this._rolTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1046,14 +1025,14 @@ namespace DAL.DataSetPagoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DataSetPago dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetRol dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pagoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Pago.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._rolTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Rol.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pagoTableAdapter.Update(updatedRows));
+                    result = (result + this._rolTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1065,13 +1044,13 @@ namespace DAL.DataSetPagoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DataSetPago dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetRol dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pagoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Pago.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._rolTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Rol.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pagoTableAdapter.Update(addedRows));
+                    result = (result + this._rolTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1083,13 +1062,13 @@ namespace DAL.DataSetPagoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DataSetPago dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetRol dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._pagoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Pago.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._rolTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Rol.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pagoTableAdapter.Update(deletedRows));
+                    result = (result + this._rolTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1125,15 +1104,15 @@ namespace DAL.DataSetPagoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DataSetPago dataSet) {
+        public virtual int UpdateAll(DataSetRol dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._pagoTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._pagoTableAdapter.Connection) == false))) {
+            if (((this._rolTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._rolTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1169,13 +1148,13 @@ namespace DAL.DataSetPagoTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._pagoTableAdapter != null)) {
-                    revertConnections.Add(this._pagoTableAdapter, this._pagoTableAdapter.Connection);
-                    this._pagoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._pagoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._pagoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._pagoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._pagoTableAdapter.Adapter);
+                if ((this._rolTableAdapter != null)) {
+                    revertConnections.Add(this._rolTableAdapter, this._rolTableAdapter.Connection);
+                    this._rolTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._rolTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._rolTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._rolTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._rolTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1236,9 +1215,9 @@ namespace DAL.DataSetPagoTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._pagoTableAdapter != null)) {
-                    this._pagoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pagoTableAdapter]));
-                    this._pagoTableAdapter.Transaction = null;
+                if ((this._rolTableAdapter != null)) {
+                    this._rolTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rolTableAdapter]));
+                    this._rolTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

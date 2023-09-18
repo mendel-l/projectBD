@@ -34,16 +34,14 @@ namespace winUI
 
         private void btnRol_Click(object sender, EventArgs e)
         {
-            //cambiar el nombre del forma al cual se va a direccionar
-            formMenu newform = new formMenu();
+            formRol newform = new formRol();
             newform.Show();
             this.Hide();
         }
 
         private void btnPago_Click(object sender, EventArgs e)
         {
-            //cambiar el nombre del forma al cual se va a direccionar
-           Pago newform = new Pago();
+            formPago newform = new formPago();
             newform.Show();
             this.Hide();
         }
@@ -58,7 +56,6 @@ namespace winUI
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            //cambiar el nombre del forma al cual se va a direccionar
             formProveedores newform = new formProveedores();
             newform.Show();
             this.Hide();

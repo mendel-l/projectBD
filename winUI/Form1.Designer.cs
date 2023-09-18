@@ -42,9 +42,11 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.btn = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             btnShowPass = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShowPass
@@ -52,7 +54,7 @@
             btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             btnShowPass.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPass.Image")));
-            btnShowPass.Location = new System.Drawing.Point(307, 221);
+            btnShowPass.Location = new System.Drawing.Point(441, 298);
             btnShowPass.Name = "btnShowPass";
             btnShowPass.Size = new System.Drawing.Size(31, 26);
             btnShowPass.TabIndex = 22;
@@ -63,6 +65,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.btn);
+            this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnInSesion);
             this.groupBox1.Controls.Add(btnShowPass);
@@ -73,9 +77,9 @@
             this.groupBox1.Controls.Add(this.tbPass);
             this.groupBox1.Controls.Add(this.tbUser);
             this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(120, 38);
+            this.groupBox1.Location = new System.Drawing.Point(37, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 330);
+            this.groupBox1.Size = new System.Drawing.Size(655, 539);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -84,7 +88,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::winUI.Properties.Resources._6073874;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(254, 96);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +100,7 @@
             this.btnClear.BackColor = System.Drawing.Color.Transparent;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(201, 265);
+            this.btnClear.Location = new System.Drawing.Point(335, 343);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 40);
             this.btnClear.TabIndex = 19;
@@ -109,7 +113,7 @@
             this.btnInSesion.BackColor = System.Drawing.Color.Transparent;
             this.btnInSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnInSesion.Location = new System.Drawing.Point(95, 266);
+            this.btnInSesion.Location = new System.Drawing.Point(229, 343);
             this.btnInSesion.Name = "btnInSesion";
             this.btnInSesion.Size = new System.Drawing.Size(100, 40);
             this.btnInSesion.TabIndex = 3;
@@ -121,7 +125,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 178);
+            this.label1.Location = new System.Drawing.Point(207, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 5;
@@ -132,7 +136,7 @@
             this.lblPassError.AutoSize = true;
             this.lblPassError.BackColor = System.Drawing.Color.Transparent;
             this.lblPassError.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPassError.Location = new System.Drawing.Point(173, 249);
+            this.lblPassError.Location = new System.Drawing.Point(307, 326);
             this.lblPassError.Name = "lblPassError";
             this.lblPassError.Size = new System.Drawing.Size(22, 13);
             this.lblPassError.TabIndex = 21;
@@ -142,7 +146,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 224);
+            this.label2.Location = new System.Drawing.Point(176, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 6;
@@ -153,7 +157,7 @@
             this.lblUserError.AutoSize = true;
             this.lblUserError.BackColor = System.Drawing.Color.Transparent;
             this.lblUserError.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblUserError.Location = new System.Drawing.Point(173, 204);
+            this.lblUserError.Location = new System.Drawing.Point(307, 281);
             this.lblUserError.Name = "lblUserError";
             this.lblUserError.Size = new System.Drawing.Size(22, 13);
             this.lblUserError.TabIndex = 20;
@@ -162,7 +166,7 @@
             // tbPass
             // 
             this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.Location = new System.Drawing.Point(152, 221);
+            this.tbPass.Location = new System.Drawing.Point(286, 298);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(149, 26);
@@ -171,14 +175,15 @@
             // tbUser
             // 
             this.tbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUser.Location = new System.Drawing.Point(152, 175);
+            this.tbUser.Location = new System.Drawing.Point(286, 252);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(149, 26);
             this.tbUser.TabIndex = 8;
             // 
             // btn
             // 
-            this.btn.Location = new System.Drawing.Point(540, 412);
+            this.btn.ForeColor = System.Drawing.Color.Black;
+            this.btn.Location = new System.Drawing.Point(567, 496);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(82, 37);
             this.btn.TabIndex = 26;
@@ -189,7 +194,8 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(12, 412);
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(6, 496);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(82, 37);
             this.btnSalir.TabIndex = 28;
@@ -197,21 +203,33 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::winUI.Properties.Resources.d8c5b314_2d31_41d0_b7e4_cf121ff6dacd;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(734, 611);
+            this.panel1.TabIndex = 29;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::winUI.Properties.Resources.d8c5b314_2d31_41d0_b7e4_cf121ff6dacd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(634, 461);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn);
+            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -230,6 +248,7 @@
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -47,7 +47,6 @@ namespace BLL
         public string editCATEGORIA(string Marca, string Modelo, string Categoria,int idCatego)
         {
 
-
             CATEGORIA.editCategoria(Marca, Modelo, Categoria, idCatego);
             return "Se editó la editorial con registro: " + idCatego;
         }
