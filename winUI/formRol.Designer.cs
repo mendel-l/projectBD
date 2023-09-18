@@ -34,7 +34,6 @@
             this.cbNombreRol = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
             this.btnInhabilitar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
@@ -72,7 +71,6 @@
             this.groupBox1.Controls.Add(this.cbNombreRol);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(126, 30);
             this.groupBox1.Name = "groupBox1";
@@ -90,7 +88,7 @@
             "Bodeguero",
             "Cajero",
             "Gerente"});
-            this.cbNombreRol.Location = new System.Drawing.Point(157, 101);
+            this.cbNombreRol.Location = new System.Drawing.Point(157, 67);
             this.cbNombreRol.Name = "cbNombreRol";
             this.cbNombreRol.Size = new System.Drawing.Size(223, 28);
             this.cbNombreRol.TabIndex = 28;
@@ -98,7 +96,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(427, 101);
+            this.label1.Location = new System.Drawing.Point(428, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 12;
@@ -113,14 +111,6 @@
             this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "NombreRol";
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombre.Location = new System.Drawing.Point(157, 67);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(223, 26);
-            this.tbNombre.TabIndex = 2;
             // 
             // btnInhabilitar
             // 
@@ -218,7 +208,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Button btnInhabilitar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGrabar;

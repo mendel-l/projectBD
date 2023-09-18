@@ -42,9 +42,34 @@ namespace winUI
             {
 
                 MessageBox.Show("Usuario verificado", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                formMenu form = new formMenu();
-                form.Show();
-                this.Hide();
+
+
+
+                if (verify == "Administrador")
+                {
+                    formMenu form = new formMenu();
+                    form.Show();
+                    this.Hide();
+                }
+                else if (verify == "Bodeguero")
+                {
+                    formMenuBodeguero form = new formMenuBodeguero();
+                    form.Show();
+                    this.Hide();
+                }
+                else if (verify == "Cajero")
+                {
+                    formMenuCajero form = new formMenuCajero();
+                    form.Show();
+                    this.Hide();
+                }
+                else if (verify == "Gerente")
+                {
+                    formMenuGerente form = new formMenuGerente();
+                    form.Show();
+                    this.Hide();
+                }
+              
 
             }
             else

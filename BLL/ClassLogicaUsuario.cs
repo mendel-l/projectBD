@@ -43,7 +43,7 @@ namespace BLL
                     if (generateHash == savedHash)
                     {
 
-                        return "usuario existente";
+                        return userData.Rows[0][6].ToString();
                     }
                     else
                     {
@@ -95,6 +95,8 @@ namespace BLL
             }
 
         }
+
+     
 
 
 
