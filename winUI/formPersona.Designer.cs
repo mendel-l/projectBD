@@ -48,6 +48,7 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnNNR = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -260,11 +261,24 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnNNR
+            // 
+            this.btnNNR.Enabled = false;
+            this.btnNNR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNNR.Location = new System.Drawing.Point(314, 539);
+            this.btnNNR.Name = "btnNNR";
+            this.btnNNR.Size = new System.Drawing.Size(115, 40);
+            this.btnNNR.TabIndex = 19;
+            this.btnNNR.Text = "listar rol de persona";
+            this.btnNNR.UseVisualStyleBackColor = true;
+            this.btnNNR.Click += new System.EventHandler(this.btnNNR_Click);
+            // 
             // formPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.btnNNR);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
@@ -305,5 +319,6 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnNNR;
     }
 }

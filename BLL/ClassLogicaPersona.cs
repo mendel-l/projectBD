@@ -7,12 +7,28 @@ using System.Threading.Tasks;
 using DAL.DataSetPersonaTableAdapters; //usa el DAL
 using System.Data; //usa el DATA TABLE
 
+
 namespace BLL
 {
     public class ClassLogicaPersona
     {
         //ATRIBUTOS
         private PersonaTableAdapter persona = null;
+
+        //atributos
+        //private f_AutoresEscribenLibrosTableAdapter _funcionAutores;
+        private nombreNNRTableAdapter _funcion;
+
+        //propiedades
+        //private f_AutoresEscribenLibrosTableAdapter funcionAutores { get { if (_funcionAutores == null) _funcionAutores = new f_AutoresEscribenLibrosTableAdapter(); return _funcionAutores; } }
+        private nombreNNRTableAdapter funcion { get { if (_funcion == null) _funcion = new nombreNNRTableAdapter(); return _funcion; } }
+
+        //métodos
+        public DataTable ListarNNR(int id)
+        {
+            return funcion.GetDataPersonaNNR(id);
+        }//Fin HistorialPrestamoEstudiante
+
 
         //PROPIEDADES
         private PersonaTableAdapter PERSONA

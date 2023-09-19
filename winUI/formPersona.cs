@@ -28,6 +28,8 @@ namespace winUI
         {
             dataGridView1.DataSource = Logica.ListarPersonas(); //carga los datos
             dataGridView1.Refresh();
+            btnNNR.Enabled = false;
+            btnActualizar.Enabled = true;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -84,7 +86,16 @@ namespace winUI
                 btnGrabar.Enabled = false;
                 btnNuevo.Enabled = true;
                 groupBox1.Enabled = true;
+                btnNNR.Enabled = true;
             }
+        }
+
+        private void btnNNR_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Logica.ListarNNR(Convert.ToInt32(label1.Text)); //carga los datos
+            dataGridView1.Refresh();
+
+            btnActualizar.Enabled=false;
         }
     }
 }

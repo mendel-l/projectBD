@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnInSesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.lblUserError = new System.Windows.Forms.Label();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.tbUser = new System.Windows.Forms.TextBox();
-            this.btn = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             btnShowPass = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -94,6 +94,29 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn
+            // 
+            this.btn.ForeColor = System.Drawing.Color.Black;
+            this.btn.Location = new System.Drawing.Point(567, 496);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(82, 37);
+            this.btn.TabIndex = 26;
+            this.btn.Text = "...";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(6, 496);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(82, 37);
+            this.btnSalir.TabIndex = 28;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnClear
             // 
@@ -179,29 +202,6 @@
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(149, 26);
             this.tbUser.TabIndex = 8;
-            // 
-            // btn
-            // 
-            this.btn.ForeColor = System.Drawing.Color.Black;
-            this.btn.Location = new System.Drawing.Point(567, 496);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(82, 37);
-            this.btn.TabIndex = 26;
-            this.btn.Text = "...";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(6, 496);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(82, 37);
-            this.btnSalir.TabIndex = 28;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // panel1
             // 

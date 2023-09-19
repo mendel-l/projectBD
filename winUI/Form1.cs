@@ -26,6 +26,8 @@ namespace winUI
             groupBox1.Location = new Point(
                 (ClientSize.Width - groupBox1.Width) / 2,
                 (ClientSize.Height - groupBox1.Height) / 2);
+
+            btn.Hide();
         }
 
         private bool dragging = false;
