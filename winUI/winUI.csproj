@@ -70,6 +70,12 @@
     <Compile Include="formCrearUsuario.Designer.cs">
       <DependentUpon>formCrearUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="formFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formFactura.Designer.cs">
+      <DependentUpon>formFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="formMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formCrearUsuario.resx">
       <DependentUpon>formCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFactura.resx">
+      <DependentUpon>formFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>

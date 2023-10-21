@@ -27,7 +27,7 @@ namespace winUI
                 (ClientSize.Width - groupBox1.Width) / 2,
                 (ClientSize.Height - groupBox1.Height) / 2);
 
-            btn.Hide();
+            //btn.Hide();
         }
 
         private bool dragging = false;
