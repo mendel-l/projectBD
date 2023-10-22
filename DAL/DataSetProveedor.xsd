@@ -114,29 +114,29 @@ SELECT IDproveedor, nombreProveedor, Direccion, numeroTelefono, CorreoElectronic
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSetProveedor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetProveedor" msprop:Generator_DataSetName="DataSetProveedor">
+  <xs:element name="DataSetProveedor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetProveedor" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetProveedor">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Proveedores" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_RowClassName="ProveedoresRow" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_UserTableName="Proveedores">
+        <xs:element name="Proveedores" msprop:Generator_RowClassName="ProveedoresRow" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IDproveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="IDproveedor" msprop:Generator_ColumnPropNameInTable="IDproveedorColumn" msprop:Generator_ColumnVarNameInTable="columnIDproveedor" msprop:Generator_UserColumnName="IDproveedor" type="xs:int" />
-              <xs:element name="nombreProveedor" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor" msprop:Generator_UserColumnName="nombreProveedor">
+              <xs:element name="IDproveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="IDproveedor" msprop:Generator_ColumnPropNameInTable="IDproveedorColumn" msprop:Generator_ColumnPropNameInRow="IDproveedor" msprop:Generator_ColumnVarNameInTable="columnIDproveedor" type="xs:int" />
+              <xs:element name="nombreProveedor" msprop:Generator_UserColumnName="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Direccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_UserColumnName="Direccion">
+              <xs:element name="Direccion" msprop:Generator_UserColumnName="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="numeroTelefono" msprop:Generator_ColumnPropNameInRow="numeroTelefono" msprop:Generator_ColumnPropNameInTable="numeroTelefonoColumn" msprop:Generator_ColumnVarNameInTable="columnnumeroTelefono" msprop:Generator_UserColumnName="numeroTelefono" type="xs:int" />
-              <xs:element name="CorreoElectronico" msprop:Generator_ColumnPropNameInRow="CorreoElectronico" msprop:Generator_ColumnPropNameInTable="CorreoElectronicoColumn" msprop:Generator_ColumnVarNameInTable="columnCorreoElectronico" msprop:Generator_UserColumnName="CorreoElectronico">
+              <xs:element name="numeroTelefono" msprop:Generator_UserColumnName="numeroTelefono" msprop:Generator_ColumnPropNameInTable="numeroTelefonoColumn" msprop:Generator_ColumnPropNameInRow="numeroTelefono" msprop:Generator_ColumnVarNameInTable="columnnumeroTelefono" type="xs:int" />
+              <xs:element name="CorreoElectronico" msprop:Generator_UserColumnName="CorreoElectronico" msprop:Generator_ColumnPropNameInTable="CorreoElectronicoColumn" msprop:Generator_ColumnPropNameInRow="CorreoElectronico" msprop:Generator_ColumnVarNameInTable="columnCorreoElectronico">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />

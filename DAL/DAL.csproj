@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetRol.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetTablasD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTablasD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetUsuario.cs">
       <DependentUpon>DataSetUsuario.xsd</DependentUpon>
     </Compile>
@@ -143,6 +148,17 @@
     </None>
     <None Include="DataSetRol.xss">
       <DependentUpon>DataSetRol.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTablasD.xsc">
+      <DependentUpon>DataSetTablasD.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTablasD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTablasD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTablasD.xss">
+      <DependentUpon>DataSetTablasD.xsd</DependentUpon>
     </None>
     <None Include="DataSetUsuario.xsc">
       <DependentUpon>DataSetUsuario.xsd</DependentUpon>

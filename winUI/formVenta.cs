@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BLL; //invocar logica de negocio
+
 namespace winUI
 {
     public partial class formVenta : Form
     {
+        ClassLogicaTodos Logica = new ClassLogicaTodos(); //se crea un objeto 
         public formVenta()
         {
             InitializeComponent();
@@ -29,12 +33,16 @@ namespace winUI
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            groupBox1.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnGrabar.Enabled = true;
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-
+            string respuesta = "";
+            respuesta = Logica.NewVenta(dtpVenta.Text, Convert.ToInt16(tbCantidad.Text), Convert.ToDouble(tbPrecioU.Text), Convert.ToInt16(tbDescuento.Text), Convert.ToInt16(tbTotal.Text), Convert.ToInt16(cbPoducto.Text));
+            MessageBox.Show(respuesta);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -44,7 +52,8 @@ namespace winUI
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = Logica.ListarTablaVentas(); //carga los datos
+            dataGridView1.Refresh();
         }
 
         private void btnInhabilitar_Click(object sender, EventArgs e)

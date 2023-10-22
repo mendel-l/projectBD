@@ -16,7 +16,7 @@ namespace winUI
         {
             InitializeComponent();
 
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Sizable;
             WindowState = FormWindowState.Maximized;
             TopMost = true;
 
