@@ -64,11 +64,23 @@
     <Compile Include="formCategoria.Designer.cs">
       <DependentUpon>formCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="formCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCliente.Designer.cs">
+      <DependentUpon>formCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="formCrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formCrearUsuario.Designer.cs">
       <DependentUpon>formCrearUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEmpleado.Designer.cs">
+      <DependentUpon>formEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="formFactura.cs">
       <SubType>Form</SubType>
@@ -100,11 +112,23 @@
     <Compile Include="formMenuGerente.Designer.cs">
       <DependentUpon>formMenuGerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="formPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPedido.Designer.cs">
+      <DependentUpon>formPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="formPersona.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formPersona.Designer.cs">
       <DependentUpon>formPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProducto.Designer.cs">
+      <DependentUpon>formProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="formProveedores.cs">
       <SubType>Form</SubType>
@@ -124,6 +148,12 @@
     <Compile Include="formPago.Designer.cs">
       <DependentUpon>formPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="formVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVenta.Designer.cs">
+      <DependentUpon>formVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -132,8 +162,14 @@
     <EmbeddedResource Include="formCategoria.resx">
       <DependentUpon>formCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formCliente.resx">
+      <DependentUpon>formCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formCrearUsuario.resx">
       <DependentUpon>formCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEmpleado.resx">
+      <DependentUpon>formEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formFactura.resx">
       <DependentUpon>formFactura.cs</DependentUpon>
@@ -150,8 +186,14 @@
     <EmbeddedResource Include="formMenuGerente.resx">
       <DependentUpon>formMenuGerente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formPedido.resx">
+      <DependentUpon>formPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formPersona.resx">
       <DependentUpon>formPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formProducto.resx">
+      <DependentUpon>formProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProveedores.resx">
       <DependentUpon>formProveedores.cs</DependentUpon>
@@ -161,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formPago.resx">
       <DependentUpon>formPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVenta.resx">
+      <DependentUpon>formVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,6 +235,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{32243c56-d508-473d-90ad-7d0246156206}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{75CC779A-595B-458B-8E91-B80C25013C46}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

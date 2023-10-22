@@ -84,17 +84,23 @@ namespace winUI
 
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
-
+            formEmpleado newform = new formEmpleado();
+            newform.Show();
+            this.Hide();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-
+            formCliente newform = new formCliente();
+            newform.Show();
+            this.Hide();
         }
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
-
+            formVenta newform = new formVenta();
+            newform.Show();
+            this.Hide();
         }
 
         private void btnFactura_Click(object sender, EventArgs e)
@@ -106,12 +112,16 @@ namespace winUI
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-
+            formProducto newform = new formProducto();
+            newform.Show();
+            this.Hide();
         }
 
         private void btnPedidoP_Click(object sender, EventArgs e)
         {
-
+            formPedido newform = new formPedido();
+            newform.Show();
+            this.Hide();
         }
     }
 }

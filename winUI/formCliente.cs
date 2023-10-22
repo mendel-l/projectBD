@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace winUI
 {
-    public partial class formFactura : Form
+    public partial class formCliente : Form
     {
-        public formFactura()
+        public formCliente()
         {
             InitializeComponent();
 
@@ -20,11 +20,11 @@ namespace winUI
             WindowState = FormWindowState.Maximized;
             TopMost = true;
 
-            groupBox1.AutoSize = true;
-            groupBox1.Anchor = AnchorStyles.None;
-            groupBox1.Location = new Point(
-                (ClientSize.Width - groupBox1.Width) / 2,
-                (ClientSize.Height - groupBox1.Height) / 2);
+            groupBox2.AutoSize = true;
+            groupBox2.Anchor = AnchorStyles.None;
+            groupBox2.Location = new Point(
+                (ClientSize.Width - groupBox2.Width) / 2,
+                (ClientSize.Height - groupBox2.Height) / 2);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -52,21 +52,16 @@ namespace winUI
 
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             formMenu newform = new formMenu();
             newform.Show();
             this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
