@@ -37,9 +37,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnInSesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPassError = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblUserError = new System.Windows.Forms.Label();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,9 +69,7 @@
             this.groupBox1.Controls.Add(this.btnInSesion);
             this.groupBox1.Controls.Add(btnShowPass);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblPassError);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lblUserError);
             this.groupBox1.Controls.Add(this.tbPass);
             this.groupBox1.Controls.Add(this.tbUser);
             this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
@@ -154,17 +150,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Usuario";
             // 
-            // lblPassError
-            // 
-            this.lblPassError.AutoSize = true;
-            this.lblPassError.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassError.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPassError.Location = new System.Drawing.Point(307, 326);
-            this.lblPassError.Name = "lblPassError";
-            this.lblPassError.Size = new System.Drawing.Size(22, 13);
-            this.lblPassError.TabIndex = 21;
-            this.lblPassError.Text = ".....";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -174,17 +159,6 @@
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Contraseña";
-            // 
-            // lblUserError
-            // 
-            this.lblUserError.AutoSize = true;
-            this.lblUserError.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserError.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblUserError.Location = new System.Drawing.Point(307, 281);
-            this.lblUserError.Name = "lblUserError";
-            this.lblUserError.Size = new System.Drawing.Size(22, 13);
-            this.lblUserError.TabIndex = 20;
-            this.lblUserError.Text = ".....";
             // 
             // tbPass
             // 
@@ -241,9 +215,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnInSesion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPassError;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblUserError;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.Button btn;

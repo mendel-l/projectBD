@@ -28,115 +28,214 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnPedidoP = new System.Windows.Forms.Button();
             this.btnPersona = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.btnRol = new System.Windows.Forms.Button();
+            this.btnFactura = new System.Windows.Forms.Button();
             this.btnCerrarS = new System.Windows.Forms.Button();
+            this.btnVenta = new System.Windows.Forms.Button();
             this.btnPago = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnPedidoP = new System.Windows.Forms.Button();
-            this.btnProducto = new System.Windows.Forms.Button();
-            this.btnFactura = new System.Windows.Forms.Button();
-            this.btnVenta = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
-            this.btnEmpleado = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.btnUsuario);
+            this.groupBox1.Controls.Add(this.btnPedidoP);
+            this.groupBox1.Controls.Add(this.btnPersona);
+            this.groupBox1.Controls.Add(this.btnProducto);
+            this.groupBox1.Controls.Add(this.btnRol);
+            this.groupBox1.Controls.Add(this.btnFactura);
+            this.groupBox1.Controls.Add(this.btnCerrarS);
+            this.groupBox1.Controls.Add(this.btnVenta);
+            this.groupBox1.Controls.Add(this.btnPago);
+            this.groupBox1.Controls.Add(this.btnCliente);
+            this.groupBox1.Controls.Add(this.btnCategoria);
+            this.groupBox1.Controls.Add(this.btnEmpleado);
+            this.groupBox1.Controls.Add(this.btnProveedores);
+            this.groupBox1.Controls.Add(this.btnSalir);
+            this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Location = new System.Drawing.Point(75, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(575, 575);
+            this.groupBox1.TabIndex = 60;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // btnUsuario
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.Transparent;
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnUsuario.Location = new System.Drawing.Point(272, 78);
-            this.btnUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUsuario.Location = new System.Drawing.Point(144, 53);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(188, 77);
+            this.btnUsuario.Size = new System.Drawing.Size(125, 50);
             this.btnUsuario.TabIndex = 4;
             this.btnUsuario.Text = "Usuario";
             this.btnUsuario.UseVisualStyleBackColor = false;
             this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
+            // btnPedidoP
+            // 
+            this.btnPedidoP.BackColor = System.Drawing.Color.Transparent;
+            this.btnPedidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidoP.ForeColor = System.Drawing.Color.Black;
+            this.btnPedidoP.Location = new System.Drawing.Point(303, 379);
+            this.btnPedidoP.Name = "btnPedidoP";
+            this.btnPedidoP.Size = new System.Drawing.Size(125, 50);
+            this.btnPedidoP.TabIndex = 59;
+            this.btnPedidoP.Text = "Pedido";
+            this.btnPedidoP.UseVisualStyleBackColor = false;
+            this.btnPedidoP.Click += new System.EventHandler(this.btnPedidoP_Click);
             // 
             // btnPersona
             // 
             this.btnPersona.BackColor = System.Drawing.Color.Transparent;
             this.btnPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersona.ForeColor = System.Drawing.Color.Black;
-            this.btnPersona.Location = new System.Drawing.Point(272, 166);
-            this.btnPersona.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPersona.Location = new System.Drawing.Point(144, 110);
             this.btnPersona.Name = "btnPersona";
-            this.btnPersona.Size = new System.Drawing.Size(188, 77);
+            this.btnPersona.Size = new System.Drawing.Size(125, 50);
             this.btnPersona.TabIndex = 5;
             this.btnPersona.Text = "Persona";
             this.btnPersona.UseVisualStyleBackColor = false;
             this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnProducto.Location = new System.Drawing.Point(303, 317);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(125, 50);
+            this.btnProducto.TabIndex = 58;
+            this.btnProducto.Text = "Producto";
+            this.btnProducto.UseVisualStyleBackColor = false;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // btnRol
             // 
             this.btnRol.BackColor = System.Drawing.Color.Transparent;
             this.btnRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRol.ForeColor = System.Drawing.Color.Black;
-            this.btnRol.Location = new System.Drawing.Point(272, 262);
-            this.btnRol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRol.Location = new System.Drawing.Point(144, 172);
             this.btnRol.Name = "btnRol";
-            this.btnRol.Size = new System.Drawing.Size(188, 77);
+            this.btnRol.Size = new System.Drawing.Size(125, 50);
             this.btnRol.TabIndex = 6;
             this.btnRol.Text = "Rol";
             this.btnRol.UseVisualStyleBackColor = false;
             this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
+            // 
+            // btnFactura
+            // 
+            this.btnFactura.BackColor = System.Drawing.Color.Transparent;
+            this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactura.ForeColor = System.Drawing.Color.Black;
+            this.btnFactura.Location = new System.Drawing.Point(303, 260);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Size = new System.Drawing.Size(125, 50);
+            this.btnFactura.TabIndex = 57;
+            this.btnFactura.Text = "Factura";
+            this.btnFactura.UseVisualStyleBackColor = false;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // btnCerrarS
             // 
             this.btnCerrarS.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrarS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarS.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarS.Location = new System.Drawing.Point(272, 726);
-            this.btnCerrarS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrarS.Location = new System.Drawing.Point(144, 474);
             this.btnCerrarS.Name = "btnCerrarS";
-            this.btnCerrarS.Size = new System.Drawing.Size(188, 77);
+            this.btnCerrarS.Size = new System.Drawing.Size(125, 50);
             this.btnCerrarS.TabIndex = 7;
             this.btnCerrarS.Text = "Cerrar Sesion";
             this.btnCerrarS.UseVisualStyleBackColor = false;
             this.btnCerrarS.Click += new System.EventHandler(this.btnCerrarS_Click);
+            // 
+            // btnVenta
+            // 
+            this.btnVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenta.ForeColor = System.Drawing.Color.Black;
+            this.btnVenta.Location = new System.Drawing.Point(144, 379);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(125, 50);
+            this.btnVenta.TabIndex = 56;
+            this.btnVenta.Text = "Venta";
+            this.btnVenta.UseVisualStyleBackColor = false;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // btnPago
             // 
             this.btnPago.BackColor = System.Drawing.Color.Transparent;
             this.btnPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPago.ForeColor = System.Drawing.Color.Black;
-            this.btnPago.Location = new System.Drawing.Point(510, 78);
-            this.btnPago.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPago.Location = new System.Drawing.Point(303, 53);
             this.btnPago.Name = "btnPago";
-            this.btnPago.Size = new System.Drawing.Size(188, 77);
+            this.btnPago.Size = new System.Drawing.Size(125, 50);
             this.btnPago.TabIndex = 8;
             this.btnPago.Text = "Pago";
             this.btnPago.UseVisualStyleBackColor = false;
             this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnCliente.Location = new System.Drawing.Point(144, 317);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(125, 50);
+            this.btnCliente.TabIndex = 55;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnCategoria
             // 
             this.btnCategoria.BackColor = System.Drawing.Color.Transparent;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.Color.Black;
-            this.btnCategoria.Location = new System.Drawing.Point(510, 166);
-            this.btnCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCategoria.Location = new System.Drawing.Point(303, 110);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(188, 77);
+            this.btnCategoria.Size = new System.Drawing.Size(125, 50);
             this.btnCategoria.TabIndex = 9;
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.UseVisualStyleBackColor = false;
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
+            // 
+            // btnEmpleado
+            // 
+            this.btnEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpleado.Location = new System.Drawing.Point(144, 260);
+            this.btnEmpleado.Name = "btnEmpleado";
+            this.btnEmpleado.Size = new System.Drawing.Size(125, 50);
+            this.btnEmpleado.TabIndex = 54;
+            this.btnEmpleado.Text = "Empleado";
+            this.btnEmpleado.UseVisualStyleBackColor = false;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
             // btnProveedores
             // 
             this.btnProveedores.BackColor = System.Drawing.Color.Transparent;
             this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedores.ForeColor = System.Drawing.Color.Black;
-            this.btnProveedores.Location = new System.Drawing.Point(510, 262);
-            this.btnProveedores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnProveedores.Location = new System.Drawing.Point(303, 172);
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(188, 77);
+            this.btnProveedores.Size = new System.Drawing.Size(125, 50);
             this.btnProveedores.TabIndex = 10;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.UseVisualStyleBackColor = false;
@@ -147,115 +246,25 @@
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(510, 726);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSalir.Location = new System.Drawing.Point(303, 474);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(188, 77);
+            this.btnSalir.Size = new System.Drawing.Size(125, 50);
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnPedidoP
-            // 
-            this.btnPedidoP.BackColor = System.Drawing.Color.Transparent;
-            this.btnPedidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidoP.ForeColor = System.Drawing.Color.Black;
-            this.btnPedidoP.Location = new System.Drawing.Point(510, 580);
-            this.btnPedidoP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnPedidoP.Name = "btnPedidoP";
-            this.btnPedidoP.Size = new System.Drawing.Size(188, 77);
-            this.btnPedidoP.TabIndex = 59;
-            this.btnPedidoP.Text = "Pedido";
-            this.btnPedidoP.UseVisualStyleBackColor = false;
-            // 
-            // btnProducto
-            // 
-            this.btnProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnProducto.Location = new System.Drawing.Point(510, 485);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(188, 77);
-            this.btnProducto.TabIndex = 58;
-            this.btnProducto.Text = "Producto";
-            this.btnProducto.UseVisualStyleBackColor = false;
-            // 
-            // btnFactura
-            // 
-            this.btnFactura.BackColor = System.Drawing.Color.Transparent;
-            this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactura.ForeColor = System.Drawing.Color.Black;
-            this.btnFactura.Location = new System.Drawing.Point(510, 397);
-            this.btnFactura.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(188, 77);
-            this.btnFactura.TabIndex = 57;
-            this.btnFactura.Text = "Factura";
-            this.btnFactura.UseVisualStyleBackColor = false;
-            // 
-            // btnVenta
-            // 
-            this.btnVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnVenta.Location = new System.Drawing.Point(272, 580);
-            this.btnVenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(188, 77);
-            this.btnVenta.TabIndex = 56;
-            this.btnVenta.Text = "Venta";
-            this.btnVenta.UseVisualStyleBackColor = false;
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnCliente.Location = new System.Drawing.Point(272, 485);
-            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(188, 77);
-            this.btnCliente.TabIndex = 55;
-            this.btnCliente.Text = "Cliente";
-            this.btnCliente.UseVisualStyleBackColor = false;
-            // 
-            // btnEmpleado
-            // 
-            this.btnEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpleado.Location = new System.Drawing.Point(272, 397);
-            this.btnEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(188, 77);
-            this.btnEmpleado.TabIndex = 54;
-            this.btnEmpleado.Text = "Empleado";
-            this.btnEmpleado.UseVisualStyleBackColor = false;
-            // 
             // formMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 848);
-            this.Controls.Add(this.btnPedidoP);
-            this.Controls.Add(this.btnProducto);
-            this.Controls.Add(this.btnFactura);
-            this.Controls.Add(this.btnVenta);
-            this.Controls.Add(this.btnCliente);
-            this.Controls.Add(this.btnEmpleado);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnProveedores);
-            this.Controls.Add(this.btnCategoria);
-            this.Controls.Add(this.btnPago);
-            this.Controls.Add(this.btnCerrarS);
-            this.Controls.Add(this.btnRol);
-            this.Controls.Add(this.btnPersona);
-            this.Controls.Add(this.btnUsuario);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BackgroundImage = global::winUI.Properties.Resources._3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.groupBox1);
             this.Name = "formMenu";
             this.Text = "formMenu";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -276,5 +285,6 @@
         private System.Windows.Forms.Button btnVenta;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnEmpleado;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

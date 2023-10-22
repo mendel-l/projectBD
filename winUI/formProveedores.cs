@@ -19,6 +19,16 @@ namespace winUI
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+
+            groupBox2.AutoSize = true;
+            groupBox2.Anchor = AnchorStyles.None;
+            groupBox2.Location = new Point(
+                (ClientSize.Width - groupBox2.Width) / 2,
+                (ClientSize.Height - groupBox2.Height) / 2);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

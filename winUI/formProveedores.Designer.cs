@@ -46,14 +46,16 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(592, 559);
+            this.btnRegresar.Location = new System.Drawing.Point(864, 604);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(130, 40);
             this.btnRegresar.TabIndex = 27;
@@ -64,7 +66,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(12, 559);
+            this.btnSalir.Location = new System.Drawing.Point(6, 604);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(130, 40);
             this.btnSalir.TabIndex = 26;
@@ -84,7 +86,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(126, 30);
+            this.groupBox1.Location = new System.Drawing.Point(258, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(489, 197);
             this.groupBox1.TabIndex = 25;
@@ -175,7 +177,7 @@
             // btnInhabilitar
             // 
             this.btnInhabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInhabilitar.Location = new System.Drawing.Point(578, 250);
+            this.btnInhabilitar.Location = new System.Drawing.Point(710, 264);
             this.btnInhabilitar.Name = "btnInhabilitar";
             this.btnInhabilitar.Size = new System.Drawing.Size(115, 40);
             this.btnInhabilitar.TabIndex = 24;
@@ -187,7 +189,7 @@
             // 
             this.btnActualizar.Enabled = false;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(314, 250);
+            this.btnActualizar.Location = new System.Drawing.Point(446, 264);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(115, 40);
             this.btnActualizar.TabIndex = 23;
@@ -199,7 +201,7 @@
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(183, 250);
+            this.btnGrabar.Location = new System.Drawing.Point(315, 264);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(115, 40);
             this.btnGrabar.TabIndex = 22;
@@ -210,7 +212,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(52, 250);
+            this.btnNuevo.Location = new System.Drawing.Point(184, 264);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(115, 40);
             this.btnNuevo.TabIndex = 21;
@@ -221,7 +223,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(126, 308);
+            this.dataGridView1.Location = new System.Drawing.Point(258, 322);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(489, 215);
             this.dataGridView1.TabIndex = 20;
@@ -230,7 +232,7 @@
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(446, 250);
+            this.btnListar.Location = new System.Drawing.Point(578, 264);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(115, 40);
             this.btnListar.TabIndex = 19;
@@ -238,25 +240,39 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.btnRegresar);
+            this.groupBox2.Controls.Add(this.btnListar);
+            this.groupBox2.Controls.Add(this.btnSalir);
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.btnNuevo);
+            this.groupBox2.Controls.Add(this.btnInhabilitar);
+            this.groupBox2.Controls.Add(this.btnGrabar);
+            this.groupBox2.Controls.Add(this.btnActualizar);
+            this.groupBox2.Location = new System.Drawing.Point(115, 30);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1000, 650);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // formProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 611);
-            this.Controls.Add(this.btnRegresar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnInhabilitar);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnGrabar);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnListar);
+            this.BackgroundImage = global::winUI.Properties.Resources.imagen_fondo_pantalla_fondo_abstracto_azul_acero;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1234, 711);
+            this.Controls.Add(this.groupBox2);
             this.Name = "formProveedores";
             this.Text = "formProveedores";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -281,5 +297,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

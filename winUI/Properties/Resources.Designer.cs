@@ -63,6 +63,16 @@ namespace winUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3 {
+            get {
+                object obj = ResourceManager.GetObject("3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6073874 {
             get {
                 object obj = ResourceManager.GetObject("6073874", resourceCulture);
@@ -73,9 +83,49 @@ namespace winUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _67164 {
+            get {
+                object obj = ResourceManager.GetObject("67164", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d8c5b314_2d31_41d0_b7e4_cf121ff6dacd {
             get {
                 object obj = ResourceManager.GetObject("d8c5b314-2d31-41d0-b7e4-cf121ff6dacd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_borde_floral_gris {
+            get {
+                object obj = ResourceManager.GetObject("fondo-borde-floral-gris", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagen_fondo_pantalla_fondo_abstracto_azul_acero {
+            get {
+                object obj = ResourceManager.GetObject("imagen-fondo-pantalla-fondo-abstracto-azul-acero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pintura_azul_mate_sobre_blanco {
+            get {
+                object obj = ResourceManager.GetObject("pintura-azul-mate-sobre-blanco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

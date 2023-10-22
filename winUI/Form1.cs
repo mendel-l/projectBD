@@ -21,6 +21,10 @@ namespace winUI
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+
             groupBox1.AutoSize = true;
             groupBox1.Anchor = AnchorStyles.None;
             groupBox1.Location = new Point(

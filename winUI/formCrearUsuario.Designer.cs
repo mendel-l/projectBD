@@ -43,7 +43,9 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,7 +60,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(70, 41);
+            this.groupBox1.Location = new System.Drawing.Point(271, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(454, 255);
             this.groupBox1.TabIndex = 11;
@@ -160,7 +162,7 @@
             // btnAnadir
             // 
             this.btnAnadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnadir.Location = new System.Drawing.Point(163, 318);
+            this.btnAnadir.Location = new System.Drawing.Point(364, 390);
             this.btnAnadir.Name = "btnAnadir";
             this.btnAnadir.Size = new System.Drawing.Size(130, 40);
             this.btnAnadir.TabIndex = 12;
@@ -171,7 +173,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(299, 318);
+            this.btnLimpiar.Location = new System.Drawing.Point(500, 390);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(130, 40);
             this.btnLimpiar.TabIndex = 13;
@@ -182,7 +184,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(12, 384);
+            this.btnSalir.Location = new System.Drawing.Point(6, 604);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(130, 40);
             this.btnSalir.TabIndex = 14;
@@ -193,7 +195,7 @@
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(442, 384);
+            this.btnRegresar.Location = new System.Drawing.Point(864, 604);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(130, 40);
             this.btnRegresar.TabIndex = 15;
@@ -201,20 +203,34 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.btnRegresar);
+            this.groupBox2.Controls.Add(this.btnAnadir);
+            this.groupBox2.Controls.Add(this.btnSalir);
+            this.groupBox2.Controls.Add(this.btnLimpiar);
+            this.groupBox2.Location = new System.Drawing.Point(115, 30);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1000, 650);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // formCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 436);
-            this.Controls.Add(this.btnRegresar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnAnadir);
-            this.Controls.Add(this.groupBox1);
+            this.BackgroundImage = global::winUI.Properties.Resources.imagen_fondo_pantalla_fondo_abstracto_azul_acero;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1234, 711);
+            this.Controls.Add(this.groupBox2);
             this.Name = "formCrearUsuario";
             this.Text = "formCrearUsuario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -236,5 +252,6 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

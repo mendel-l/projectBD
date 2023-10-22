@@ -198,5 +198,20 @@
   <ItemGroup>
     <None Include="Resources\d8c5b314-2d31-41d0-b7e4-cf121ff6dacd.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-borde-floral-gris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\67164.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen-fondo-pantalla-fondo-abstracto-azul-acero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pintura-azul-mate-sobre-blanco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

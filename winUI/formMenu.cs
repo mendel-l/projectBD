@@ -16,6 +16,16 @@ namespace winUI
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+
+            groupBox1.AutoSize = true;
+            groupBox1.Anchor = AnchorStyles.None;
+            groupBox1.Location = new Point(
+                (ClientSize.Width - groupBox1.Width) / 2,
+                (ClientSize.Height - groupBox1.Height) / 2);
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
@@ -70,6 +80,38 @@ namespace winUI
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            formFactura newform = new formFactura();
+            newform.Show();
+            this.Hide();
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPedidoP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

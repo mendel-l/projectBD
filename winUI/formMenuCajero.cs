@@ -16,6 +16,16 @@ namespace winUI
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+
+            groupBox1.AutoSize = true;
+            groupBox1.Anchor = AnchorStyles.None;
+            groupBox1.Location = new Point(
+                (ClientSize.Width - groupBox1.Width) / 2,
+                (ClientSize.Height - groupBox1.Height) / 2);
         }
 
         private void btnCerrarS_Click(object sender, EventArgs e)
