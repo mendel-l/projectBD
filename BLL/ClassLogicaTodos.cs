@@ -75,12 +75,10 @@ namespace BLL
             }
         }
 
-
-
         //METODOS
 
 
-        //-----PROVEEDORES-----
+        //-----PEDIDO PROVEEDORES-----
         public DataTable ListarTablaPedido()
         {
             return PEDIDO.GetDataPedido(); //from Select * seleccionar la capa
@@ -101,12 +99,11 @@ namespace BLL
             }
         }
 
-        //no reconoce una onda ya me arte :b
-        //public string editPedido(string noPedido, string fechaPedido, int IDproveedor, int IDpedido)
-        //{
-        //    PEDIDO.UpdateQueryPedido(Convert.ToInt32(noPedido), fechaPedido, IDproveedor, IDpedido);
-        //    return "Se editó la editorial con registro: " + IDpedido;
-        //}
+        public string editPedido(string noPedido, string fechaPedido, int IDproveedor, int IDpedido)
+        {
+            PEDIDO.UpdateQueryPedido(Convert.ToInt32(noPedido), fechaPedido, IDproveedor, IDpedido);
+            return "Se editó la el pedido con numero de pedido: " + noPedido + ", y registro: " + IDpedido;
+        }
 
         //-----PRODUCTO-----
         public DataTable ListarTablaProducto()
@@ -118,8 +115,14 @@ namespace BLL
         {
             {
                 PRODUCTO.InsertQueryProducto(Descripcion, precioVenta, Descuento, Stock, FechaEntrada, FechaActualizacion, IDcategoria, IDpedido);
-                return "Se agregó un nuevo producto con ID" + IDpedido;
+                return "Se agregó un nuevo producto con ID " + IDpedido + "en la categoria " + IDcategoria;
             }
+        }
+
+        public string editProducto(string Descripcion, double precioVenta, double Descuento, int Stock, string FechaEntrada, string FechaActualizacion, int IDcategoria, int IDpedido, int IDproducto)
+        {
+            PRODUCTO.UpdateQueryProducto(Descripcion, precioVenta, Descuento, Stock, FechaEntrada, FechaActualizacion, IDcategoria, IDpedido, IDproducto);
+            return "Se editó la editorial con registro: " + IDpedido;
         }
 
         //-----VENTAS-----
@@ -132,8 +135,13 @@ namespace BLL
         {
             {
                 VENTA.InsertQueryVenta(FechaVenta, Cantidad, precioUnitario, Descuento, Total, IDproducto);
-                return "Se agregó una nueva venta con total de" + Total;
+                return "Se agregó una nueva venta con total de Q " + Total + "con id " + IDproducto;
             }
+        }
+        public string editVenta(string FechaVenta, int Cantidad, double precioUnitario, int Descuento, double Total, int IDproducto, int IDventa)
+        {
+            VENTA.UpdateQueryVenta(FechaVenta, Cantidad, precioUnitario, Descuento, Total, IDproducto, IDventa);
+            return "Se editó la editorial con registro: " + IDventa;
         }
 
         //-----CLIENTES-----
@@ -145,14 +153,14 @@ namespace BLL
         public string NewCliente(int IDpersona)
         {
             CLIENTE.InsertQueryCliente(IDpersona);
-            return "Se agregó un nuevo " + IDpersona;
+            return "Se agregó un nuevo cliente con id " + IDpersona;
         }
 
-        //public string editCliente(int IDpersona, int IDcliente)
-        //{
-        //    CLIENTE.UpdateQueryCliente(IDpersona, IDcliente);
-        //    return "Se editó la tabla Persona con registro id: " + IDcliente;
-        //}
+        public string editCliente(int IDpersona, int IDcliente)
+        {
+            CLIENTE.UpdateQueryCliente(IDpersona, IDcliente);
+            return "Se editó la tabla Persona con registro id: " + IDcliente;
+        }
 
         //-----EMPLEADOS-----
         public DataTable ListarTablaEmpleado()
@@ -163,7 +171,12 @@ namespace BLL
         public string NewEmpleado(string Cargo, string fechaInicio, int IDpersona)
         {
             EMPLEADO.InsertQueryEmpleado(Cargo, fechaInicio, IDpersona);
-            return "Se agregó un nuevo " + IDpersona;
+            return "Se agregó un nuevo enpleado con cargo " + Cargo;
+        }
+        public string editEmpleado(string Cargo, string fechaInicio, int IDpersona, int IDempleado)
+        {
+            EMPLEADO.UpdateQueryEmpleado(Cargo, fechaInicio, IDpersona, IDempleado);
+            return "Se editó la tabla Persona con registro id: " + IDempleado;
         }
     }
 }

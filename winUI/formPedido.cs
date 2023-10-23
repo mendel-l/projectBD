@@ -52,15 +52,15 @@ namespace winUI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             string respuesta = "";
-            respuesta = Logica.NewPedido(tbNoPedido.Text, dtpInicio.Text, Convert.ToInt32(cbProvvedor.Text));
+            respuesta = Logica.NewPedido(tbNoPedido.Text, dtpInicio.Text, Convert.ToInt32(cbProvedor.Text));
             MessageBox.Show(respuesta);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            //string respuesta = "";
-            //respuesta = Logica.editProveedor(tbNombre.Text, tbDireccion.Text, int.Parse(tbTelefono.Text), tbCorreo.Text, int.Parse(label1.Text));
-            //MessageBox.Show(respuesta);
+            string respuesta = "";
+            respuesta = Logica.editPedido(tbNoPedido.Text, dtpInicio.Text, Convert.ToInt32(cbProvedor.Text), int.Parse(label1.Text));
+            MessageBox.Show(respuesta);
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -72,6 +72,23 @@ namespace winUI
         private void btnInhabilitar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count - 1)
+            {
+                this.label4.Visible = true;
+                label1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                tbNoPedido.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dtpInicio.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cbProvedor.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                btnActualizar.Enabled = true;
+                btnGrabar.Enabled = false;
+                btnNuevo.Enabled = true;
+                groupBox1.Enabled = true;
+            }
         }
     }
 }

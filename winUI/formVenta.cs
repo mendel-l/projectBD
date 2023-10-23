@@ -47,7 +47,9 @@ namespace winUI
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            string respuesta = "";
+            respuesta = Logica.editVenta(dtpVenta.Text, Convert.ToInt16(tbCantidad.Text), Convert.ToDouble(tbPrecioU.Text), Convert.ToInt16(tbDescuento.Text), Convert.ToInt16(tbTotal.Text), Convert.ToInt16(cbPoducto.Text), int.Parse(label1.Text));
+            MessageBox.Show(respuesta);
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -71,6 +73,26 @@ namespace winUI
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count - 1)
+            {
+                this.label4.Visible = true;
+                label1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                dtpVenta.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                tbCantidad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tbPrecioU.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                tbDescuento.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                tbTotal.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cbPoducto.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+                btnActualizar.Enabled = true;
+                btnGrabar.Enabled = false;
+                btnNuevo.Enabled = true;
+                groupBox1.Enabled = true;
+            }
         }
     }
 }

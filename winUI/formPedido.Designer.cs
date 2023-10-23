@@ -30,10 +30,13 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbProvedor = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbNoPedido = new System.Windows.Forms.TextBox();
-            this.btnNNR = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,10 +45,6 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnInhabilitar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbProvvedor = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,7 +54,6 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.btnNNR);
             this.groupBox2.Controls.Add(this.btnListar);
             this.groupBox2.Controls.Add(this.btnRegresar);
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -73,7 +71,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbProvvedor);
+            this.groupBox1.Controls.Add(this.cbProvedor);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dtpInicio);
             this.groupBox1.Controls.Add(this.label7);
@@ -87,6 +85,43 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // cbProvedor
+            // 
+            this.cbProvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProvedor.FormattingEnabled = true;
+            this.cbProvedor.Location = new System.Drawing.Point(169, 118);
+            this.cbProvedor.Name = "cbProvedor";
+            this.cbProvedor.Size = new System.Drawing.Size(223, 28);
+            this.cbProvedor.TabIndex = 24;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(54, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 20);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "IDproveedor";
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInicio.Location = new System.Drawing.Point(169, 86);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(223, 26);
+            this.dtpInicio.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(65, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "fechaInicio";
             // 
             // label1
             // 
@@ -114,17 +149,6 @@
             this.tbNoPedido.Name = "tbNoPedido";
             this.tbNoPedido.Size = new System.Drawing.Size(223, 26);
             this.tbNoPedido.TabIndex = 2;
-            // 
-            // btnNNR
-            // 
-            this.btnNNR.Enabled = false;
-            this.btnNNR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNNR.Location = new System.Drawing.Point(447, 549);
-            this.btnNNR.Name = "btnNNR";
-            this.btnNNR.Size = new System.Drawing.Size(115, 40);
-            this.btnNNR.TabIndex = 19;
-            this.btnNNR.Text = "listar rol de persona";
-            this.btnNNR.UseVisualStyleBackColor = true;
             // 
             // btnListar
             // 
@@ -156,6 +180,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(489, 215);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnSalir
             // 
@@ -214,43 +239,6 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpInicio.Location = new System.Drawing.Point(169, 86);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(223, 26);
-            this.dtpInicio.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 20);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "fechaInicio";
-            // 
-            // cbProvvedor
-            // 
-            this.cbProvvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbProvvedor.FormattingEnabled = true;
-            this.cbProvvedor.Location = new System.Drawing.Point(169, 118);
-            this.cbProvvedor.Name = "cbProvvedor";
-            this.cbProvvedor.Size = new System.Drawing.Size(223, 28);
-            this.cbProvvedor.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "IDproveedor";
-            // 
             // formPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,7 +262,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbNoPedido;
-        private System.Windows.Forms.Button btnNNR;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -285,7 +272,7 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbProvvedor;
+        private System.Windows.Forms.ComboBox cbProvedor;
         private System.Windows.Forms.Label label4;
     }
 }

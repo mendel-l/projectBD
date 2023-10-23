@@ -30,12 +30,13 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbPersona = new System.Windows.Forms.ComboBox();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbCargo = new System.Windows.Forms.TextBox();
-            this.btnNNR = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -44,9 +45,7 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnInhabilitar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dataSetCategoria1 = new DAL.DataSetCategoria();
-            this.cbPersona = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,7 +56,6 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.btnNNR);
             this.groupBox2.Controls.Add(this.btnListar);
             this.groupBox2.Controls.Add(this.btnRegresar);
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -89,6 +87,23 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // cbPersona
+            // 
+            this.cbPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPersona.FormattingEnabled = true;
+            this.cbPersona.Location = new System.Drawing.Point(168, 125);
+            this.cbPersona.Name = "cbPersona";
+            this.cbPersona.Size = new System.Drawing.Size(223, 28);
+            this.cbPersona.TabIndex = 20;
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInicio.Location = new System.Drawing.Point(168, 93);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(223, 26);
+            this.dtpInicio.TabIndex = 13;
             // 
             // label1
             // 
@@ -137,17 +152,6 @@
             this.tbCargo.Size = new System.Drawing.Size(223, 26);
             this.tbCargo.TabIndex = 2;
             // 
-            // btnNNR
-            // 
-            this.btnNNR.Enabled = false;
-            this.btnNNR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNNR.Location = new System.Drawing.Point(447, 549);
-            this.btnNNR.Name = "btnNNR";
-            this.btnNNR.Size = new System.Drawing.Size(115, 40);
-            this.btnNNR.TabIndex = 19;
-            this.btnNNR.Text = "listar rol de persona";
-            this.btnNNR.UseVisualStyleBackColor = true;
-            // 
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,6 +182,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(489, 215);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnSalir
             // 
@@ -236,27 +241,10 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpInicio.Location = new System.Drawing.Point(168, 93);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(223, 26);
-            this.dtpInicio.TabIndex = 13;
-            // 
             // dataSetCategoria1
             // 
             this.dataSetCategoria1.DataSetName = "DataSetCategoria";
             this.dataSetCategoria1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cbPersona
-            // 
-            this.cbPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPersona.FormattingEnabled = true;
-            this.cbPersona.Location = new System.Drawing.Point(168, 125);
-            this.cbPersona.Name = "cbPersona";
-            this.cbPersona.Size = new System.Drawing.Size(223, 28);
-            this.cbPersona.TabIndex = 20;
             // 
             // formEmpleado
             // 
@@ -284,7 +272,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbCargo;
-        private System.Windows.Forms.Button btnNNR;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.DataGridView dataGridView1;

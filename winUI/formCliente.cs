@@ -47,7 +47,9 @@ namespace winUI
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            string respuesta = "";
+            respuesta = Logica.editCliente(Convert.ToInt16(cbPersona.Text), int.Parse(label1.Text));
+            MessageBox.Show(respuesta);
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -71,6 +73,21 @@ namespace winUI
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count - 1)
+            {
+                this.label4.Visible = true;
+                label1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                cbPersona.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                btnActualizar.Enabled = true;
+                btnGrabar.Enabled = false;
+                btnNuevo.Enabled = true;
+                groupBox1.Enabled = true;
+            }
         }
     }
 }
