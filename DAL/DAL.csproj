@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetFactura.cs">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetCategoria.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +102,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DataSetFactura.xsc">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetFactura.xss">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
     <None Include="DataSetCategoria.xsc">
       <DependentUpon>DataSetCategoria.xsd</DependentUpon>
     </None>

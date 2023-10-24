@@ -200,6 +200,7 @@
             this.cbIdCli.Name = "cbIdCli";
             this.cbIdCli.Size = new System.Drawing.Size(223, 28);
             this.cbIdCli.TabIndex = 31;
+            this.cbIdCli.SelectedIndexChanged += new System.EventHandler(this.cbIdCli_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -279,6 +280,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(489, 215);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnGrabar
             // 

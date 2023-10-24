@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassLogicaCategoria.cs" />
+    <Compile Include="ClassLogicaFactura.cs" />
     <Compile Include="ClassLogicaPago.cs" />
     <Compile Include="ClassLogicaPersona.cs" />
     <Compile Include="ClassLogicaProveedor.cs" />
