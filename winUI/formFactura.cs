@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using BLL;
+//para la factura
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace winUI
@@ -83,6 +89,7 @@ namespace winUI
 
             cbIdPago.DataSource = Logica.listaridP();
             cbIdPago.DisplayMember = "⁯IDpago";
+            btnFactura.Enabled = true;
         }
         public void limpiar()
         {
@@ -104,7 +111,89 @@ namespace winUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obtner ids de la tabla gridview
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string idPersona = selectedRow.Cells[3].Value.ToString();
+                string idVenta = selectedRow.Cells[4].Value.ToString();
+                string idPago = selectedRow.Cells[5].Value.ToString();
 
+
+
+
+                // Obtener datos de query y pasarselos a los parametros
+                DataTable dataTable = Logica.obtenerClienteNom(Convert.ToInt16(idPersona));
+                string NombreCliente = dataTable.Rows[0]["nombre"].ToString();
+
+                DataTable dataTable2 = Logica.obtenerTpago(Convert.ToInt16(idPago));
+                string FormaPago = dataTable2.Rows[0]["tipoPago"].ToString();
+
+                DataTable dataTable3 = Logica.obtenerCantidadV(Convert.ToInt16(idVenta));
+                string CVentas = dataTable3.Rows[0]["Cantidad"].ToString();
+
+                DataTable dataTable4 = Logica.obtenerVtotal(Convert.ToInt16(idVenta));
+                string Tventas = dataTable4.Rows[0]["Total"].ToString();
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+                // Mandar parametros al array
+                Factura factura = new Factura();
+                factura.Cliente = "Nombre del cliente"+ idPersona; // Esto puede obtenerse de otro lugar
+                factura.Fecha = DateTime.Now;
+                factura.Detalles.Add(new DetalleFactura(NombreCliente, CVentas, Tventas, FormaPago));
+
+                
+                // Crear el documento PDF
+                Document doc = new Document();
+                string fileName = "C:\\Users\\mau91\\OneDrive\\Documentos\\BD\\FinalBD\\projectBD\\FacturasFactura.pdf";
+
+                try
+                {
+                    PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(fileName, FileMode.Create));
+                    doc.Open();
+
+                  
+                    Paragraph paragraph = new Paragraph();
+                    paragraph.Add("Factura\n\n");
+                    paragraph.Add("Fecha de Factura: " + factura.Fecha.ToString() + "\n");
+                    paragraph.Add("\nDetalles:\n");
+
+                    foreach (DetalleFactura detalle in factura.Detalles)
+                    {
+                        paragraph.Add("Nombre Cliente: "+detalle.Nombre + "\nCantidad: " + detalle.Cantidad + "\nMonto total: " + detalle.Monto + "\nTipo de pago: " + detalle.TipoPag);
+                    }
+
+                    doc.Add(paragraph);
+                }
+                finally
+                {
+                    doc.Close();
+                }
+
+                // Abre el archivo PDF
+                System.Diagnostics.Process.Start(fileName);
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una fila antes de generar la factura.");
+            }
+                
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

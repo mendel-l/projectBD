@@ -35,6 +35,30 @@ namespace BLL
             }
         }
         /*----------------------------------------------------*/
+        private PagoTableAdapter pago = null;
+
+        private PagoTableAdapter PAGOS
+        {
+            get
+            {
+                if (pago == null)
+                    pago = new PagoTableAdapter();
+                return pago;
+            }
+        }
+        /*----------------------------------------------------*/
+        private VentasTableAdapter ventas = null;
+
+        private VentasTableAdapter VENTAS
+        {
+            get
+            {
+                if (ventas == null)
+                    ventas = new VentasTableAdapter();
+                return ventas;
+            }
+        }
+        /*----------------------------------------------------*/
 
         public DataTable listarIDCli()
         {
@@ -54,19 +78,83 @@ namespace BLL
             return FACTURAS.GetDataAllFact();
         }
 
-        public string nuevaFactura(int nofactura, string fecha, int idCli, int idVenta,int idPag)
+        public string nuevaFactura(int nofactura, string fecha, int idCli, int idVenta, int idPag)
         {
             {
                 FACTURAS.inserFacturas(nofactura, fecha, idCli, idVenta, idPag);
-                return "Se agregó un nueva factura "+nofactura;
+                return "Se agregó un nueva factura " + nofactura;
             }
         }
-        public string editFactura(int nofactura, string fecha, int idCli, int idVenta, int idPag,int idF)
+        public string editFactura(int nofactura, string fecha, int idCli, int idVenta, int idPag, int idF)
         {
             {
-                FACTURAS.UpdateFacturas(nofactura, fecha, idCli, idVenta, idPag,idF);
+                FACTURAS.UpdateFacturas(nofactura, fecha, idCli, idVenta, idPag, idF);
                 return "Se actualizo la factura No. " + nofactura;
             }
         }
+
+        public DataTable obtenerClienteNom(int idCli)
+        {
+            {
+            
+                return CLIENTES.getNomCli(idCli);
+            }
+        }
+
+        public DataTable obtenerTpago(int idPag)
+        {
+            {
+
+                return PAGOS.GetDataTipoPag(idPag);
+            }
+        }
+
+        public DataTable obtenerCantidadV(int idPag)
+        {
+            {
+
+                return VENTAS.GetVentasCantidad(idPag);
+            }
+        }
+
+        public DataTable obtenerVtotal(int idPag)
+        {
+            {
+
+                return PAGOS.GetDataVtotal(idPag);
+            }
+        }
+
     }
+    public class Factura //clase Logica principal
+    {
+        public string Cliente { get; set; }
+        public DateTime Fecha { get; set; }
+        public List<DetalleFactura> Detalles { get; set; }
+
+        public Factura()
+        {
+            Detalles = new List<DetalleFactura>();
+        }
+    }
+
+    public class DetalleFactura
+    {
+        public string Nombre { get; set; }
+        public string Cantidad { get; set; }
+        public string Monto { get; set; }
+        public string TipoPag { get; set; }
+
+        public DetalleFactura(string nombre, string cantidad,string monto, string tipopag)
+        {
+            Nombre = nombre;
+            Cantidad = cantidad;
+            Monto = monto;
+            TipoPag = tipopag;
+        }
+    } 
+
+
+
 }
+
