@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 
 using BLL;
+using Microsoft.Reporting.WinForms;
 
 namespace winUI
 {
     public partial class FormHistorial : Form
     {
-        ClassLogicaFactura Logica = new ClassLogicaFactura(); //se crea un objeto 
+        ClassLogicaPersona LogicaPersona = new ClassLogicaPersona(); //se crea un objeto 
+        ClassLogicaFactura LogicaFactura = new ClassLogicaFactura(); //se crea un objeto 
         public FormHistorial()
         {
             InitializeComponent();
@@ -23,13 +25,56 @@ namespace winUI
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Logica.ListarPretasmos(); //carga los datos
-            dataGridView1.Refresh();
+            //formFactura
+            ClassLogicaFactura LogicaFactura = new ClassLogicaFactura();
+            var data = LogicaFactura.ListarPretasmos();
+
+            ReportDataSource Reporte;
+            Reporte = new ReportDataSource("DataSetFacturaListar", data);
+
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = @"winUI.Reportes.ReportFactura.rdlc";
+            this.reportViewer1.LocalReport.DataSources.Clear();
+
+            this.reportViewer1.LocalReport.DataSources.Add(Reporte);
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnFactura_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnListarPer_Click(object sender, EventArgs e)
+        {
+            ClassLogicaPersona LogicaPersona = new ClassLogicaPersona();
+            var data = LogicaPersona.ListarPersonas();
+
+            ReportDataSource Reporte;
+            Reporte = new ReportDataSource("DataSet1", data);
+
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = @"winUI.Reportes.ReportPersona.rdlc";
+            this.reportViewer1.LocalReport.DataSources.Clear();
+
+            this.reportViewer1.LocalReport.DataSources.Add(Reporte);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void FormHistorial_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            formFactura newform = new formFactura();
+            newform.Show();
+            this.Hide();
         }
     }
 }
