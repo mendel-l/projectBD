@@ -26,8 +26,6 @@ namespace winUI
 
             InitializeComponent();
 
-
-
             FormBorderStyle = FormBorderStyle.Sizable;
             WindowState = FormWindowState.Maximized;
             TopMost = true;
@@ -48,8 +46,6 @@ namespace winUI
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-
-
             string respuesta = "";
             respuesta = Logica.nuevaFactura(Convert.ToInt16(tbNoFactura.Text.ToString()), dateTimePicker1.Text.ToString(), Convert.ToInt16(cbIdCli.Text.ToString()), Convert.ToInt16(cbIdVen.Text.ToString()), Convert.ToInt16(cbIdPago.Text.ToString()));
             MessageBox.Show(respuesta);
@@ -75,11 +71,11 @@ namespace winUI
                 limpiar();
 
             }
-
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+
             refrs();
             cbIdCli.DataSource = Logica.listarIDCli();
             cbIdCli.DisplayMember = "IDclientes";
@@ -119,9 +115,6 @@ namespace winUI
                 string idVenta = selectedRow.Cells[4].Value.ToString();
                 string idPago = selectedRow.Cells[5].Value.ToString();
 
-
-
-
                 // Obtener datos de query y pasarselos a los parametros
                 DataTable dataTable = Logica.obtenerClienteNom(Convert.ToInt16(idPersona));
                 string NombreCliente = dataTable.Rows[0]["nombre"].ToString();
@@ -135,22 +128,6 @@ namespace winUI
                 DataTable dataTable4 = Logica.obtenerVtotal(Convert.ToInt16(idVenta));
                 string Tventas = dataTable4.Rows[0]["Total"].ToString();
 
-
-
-
-
-
-
-              
-
-
-
-
-
-
-
-
-
                 // Mandar parametros al array
                 Factura factura = new Factura();
                 factura.Cliente = "Nombre del cliente"+ idPersona; // Esto puede obtenerse de otro lugar
@@ -160,7 +137,9 @@ namespace winUI
                 
                 // Crear el documento PDF
                 Document doc = new Document();
-                string fileName = "C:\\Users\\mau91\\OneDrive\\Documentos\\BD\\FinalBD\\projectBD\\FacturasFactura.pdf";
+
+                //cambiar la ruta de donde se quere el archivo PDF-----------------------------------------------
+                string fileName = "C:\\Users\\m3mes\\OneDrive\\Documents\\BaseDatos\\projectBD\\FacturasFactura.pdf";
 
                 try
                 {
@@ -191,9 +170,7 @@ namespace winUI
             else
             {
                 MessageBox.Show("Selecciona una fila antes de generar la factura.");
-            }
-                
-            
+            }    
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -230,6 +207,13 @@ namespace winUI
 
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormHistorial newform = new FormHistorial();
+            newform.Show();
+            this.Hide();
         }
     }
 }

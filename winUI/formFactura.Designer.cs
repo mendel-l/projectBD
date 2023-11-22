@@ -33,6 +33,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbIdPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbNoFactura = new System.Windows.Forms.TextBox();
@@ -59,9 +60,9 @@
             // 
             this.btnFactura.Enabled = false;
             this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactura.Location = new System.Drawing.Point(444, 87);
+            this.btnFactura.Location = new System.Drawing.Point(497, 99);
             this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(277, 40);
+            this.btnFactura.Size = new System.Drawing.Size(137, 40);
             this.btnFactura.TabIndex = 29;
             this.btnFactura.Text = "Generar Factura";
             this.btnFactura.UseVisualStyleBackColor = true;
@@ -92,6 +93,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnRegresar);
@@ -130,6 +132,17 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(381, 577);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 40);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Ver historial";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbIdPago
             // 
@@ -242,7 +255,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(90, 49);
+            this.btnNuevo.Location = new System.Drawing.Point(180, 49);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(115, 40);
             this.btnNuevo.TabIndex = 22;
@@ -253,7 +266,7 @@
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(484, 49);
+            this.btnListar.Location = new System.Drawing.Point(574, 49);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(115, 40);
             this.btnListar.TabIndex = 20;
@@ -264,7 +277,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(167, 105);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(654, 215);
@@ -275,7 +288,7 @@
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(221, 49);
+            this.btnGrabar.Location = new System.Drawing.Point(311, 49);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(115, 40);
             this.btnGrabar.TabIndex = 23;
@@ -286,7 +299,7 @@
             // btnInhabilitar
             // 
             this.btnInhabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInhabilitar.Location = new System.Drawing.Point(616, 49);
+            this.btnInhabilitar.Location = new System.Drawing.Point(706, 49);
             this.btnInhabilitar.Name = "btnInhabilitar";
             this.btnInhabilitar.Size = new System.Drawing.Size(115, 40);
             this.btnInhabilitar.TabIndex = 25;
@@ -298,7 +311,7 @@
             // 
             this.btnActualizar.Enabled = false;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(352, 49);
+            this.btnActualizar.Location = new System.Drawing.Point(442, 49);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(115, 40);
             this.btnActualizar.TabIndex = 24;
@@ -349,5 +362,6 @@
         private System.Windows.Forms.ComboBox cbIdPago;
         private System.Windows.Forms.ComboBox cbIdVen;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
     }
 }

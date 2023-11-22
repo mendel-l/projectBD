@@ -24,6 +24,7 @@ namespace BLL
         }
         /*----------------------------------------------------*/
         private FacturasTableAdapter facturas = null;
+        private v_ListadoFacturasTableAdapter prestamo = null;
 
         private FacturasTableAdapter FACTURAS
         {
@@ -34,6 +35,32 @@ namespace BLL
                 return facturas;
             }
         }
+        private v_ListadoFacturasTableAdapter PRESTAMO
+        {
+            get { if (prestamo == null) prestamo = new v_ListadoFacturasTableAdapter(); return prestamo; }
+        }
+
+        public DataTable ListarPretasmos()
+        {
+            return PRESTAMO.GetDataListadoFactura();
+        }//fin de ListarPretasmos
+
+
+        public string grabaPrestamoTRANSACCION(DateTime fecha_fin, int estudiante, List<ClassDTOprestamo> listado)
+        {
+            string respuesta = "";
+            DataTable _dt = new DataTable() { Columns = { "libroId" } };
+            foreach (ClassDTOprestamo item in listado)
+            {
+                _dt.Rows.Add(item.libroId);
+            }
+            PRESTAMO.sp_CreaPrestamo(fecha_fin, estudiante, _dt, ref respuesta);
+
+            return respuesta;
+        }//fin grabaPrestamoTRANSACCION
+
+
+
         /*----------------------------------------------------*/
         private PagoTableAdapter pago = null;
 

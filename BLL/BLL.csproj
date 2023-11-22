@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassDTOprestamo.cs" />
     <Compile Include="ClassLogicaCategoria.cs" />
     <Compile Include="ClassLogicaFactura.cs" />
     <Compile Include="ClassLogicaPago.cs" />

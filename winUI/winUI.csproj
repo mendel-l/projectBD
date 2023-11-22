@@ -97,6 +97,12 @@
     <Compile Include="formFactura.Designer.cs">
       <DependentUpon>formFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistorial.Designer.cs">
+      <DependentUpon>FormHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="formMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formFactura.resx">
       <DependentUpon>formFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistorial.resx">
+      <DependentUpon>FormHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMenu.resx">
       <DependentUpon>formMenu.cs</DependentUpon>
