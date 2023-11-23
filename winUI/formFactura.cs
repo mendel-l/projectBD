@@ -42,6 +42,7 @@ namespace winUI
             groupBox2.Enabled = true;
             btnGrabar.Enabled = true;
             btnNuevo.Enabled = false;
+            btnAnularFac.Enabled = false;
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -204,8 +205,7 @@ namespace winUI
                 btnNuevo.Enabled = false;
                 btnActualizar.Enabled = true;
                 groupBox2.Enabled = true;
-
-
+                btnAnularFac.Enabled = true;
             }
         }
 
@@ -218,7 +218,45 @@ namespace winUI
 
         private void btnAnularFac_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obtener ids de la tabla gridview
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string idPersona = selectedRow.Cells[3].Value.ToString();
+                string idVenta = selectedRow.Cells[4].Value.ToString();
+                string idPago = selectedRow.Cells[5].Value.ToString();
 
+                // Obtener datos de query y pasarselos a los parametros
+                DataTable dataTable = Logica.obtenerClienteNom(Convert.ToInt16(idPersona));
+                string NombreCliente = dataTable.Rows[0]["nombre"].ToString();
+
+                DataTable dataTable2 = Logica.obtenerTpago(Convert.ToInt16(idPago));
+                string FormaPago = dataTable2.Rows[0]["tipoPago"].ToString();
+
+                DataTable dataTable3 = Logica.obtenerCantidadV(Convert.ToInt16(idVenta));
+                string CVentas = dataTable3.Rows[0]["Cantidad"].ToString();
+
+                DataTable dataTable4 = Logica.obtenerVtotal(Convert.ToInt16(idVenta));
+                string Tventas = dataTable4.Rows[0]["Total"].ToString();
+
+                // Mostrar la información en el listBox1
+                listBox1.Items.Clear();
+                listBox1.Items.Add("Factura Anulada");
+                listBox1.Items.Add($"Nombre Cliente: {NombreCliente}");
+                listBox1.Items.Add($"Cantidad: 0");
+                listBox1.Items.Add($"Monto total: 0");
+                listBox1.Items.Add($"Tipo de pago: Anulado");
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una fila antes de anular la factura.");
+            }
+
+        }
+
+        private void formFactura_Load(object sender, EventArgs e)
+        {
+            btnAnularFac.Enabled = false;
         }
     }
 }

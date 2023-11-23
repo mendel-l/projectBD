@@ -354,6 +354,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formFactura";
             this.Text = "formFactura";
+            this.Load += new System.EventHandler(this.formFactura_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

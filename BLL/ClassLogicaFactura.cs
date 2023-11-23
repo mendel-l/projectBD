@@ -152,6 +152,12 @@ namespace BLL
             }
         }
 
+        public string AnularFactura(int idFactura)
+        {
+            return "Factura anulada correctamente";
+        }
+
+
     }
     public class Factura //clase Logica principal
     {
