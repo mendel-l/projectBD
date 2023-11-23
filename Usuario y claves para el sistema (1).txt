@@ -1,0 +1,24 @@
+|    usuario	|   contraseña	|	   Rol		|
+---------------------------------------------------------
+|	mendel	|	123	|	Administrador	|
+|	user2	|	321	|	Bodeguero       |
+|	user3	|	123	|	Cajero		|
+|	user4	|	321	|	Gerente		|
+---------------------------------------------------------
+
+
+el servidor utilizado para este proyecto tiene como nombre "PC"
+
+
+se debe cambiar la ruta en la linea 149 en el apartado de programacion de formFactura
+
+
+integrantes:
+Francisco Manuel Perez de Leon - 202108035
+Mendelssohn Alessandro oTambriz Torres - 202108037
+
+link de video explicando el proyecto:
+https://drive.google.com/file/d/1bU7h9Q9QcKxpb4WXtxSIONJ_aIq3VKw_/view?usp=sharing
+
+el proyecto tambien se trabajo en GIT-HUB aca el link del repositorio:
+https://github.com/mendel-l/projectBD.git
