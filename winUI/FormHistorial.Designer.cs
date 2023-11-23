@@ -34,14 +34,15 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(297, 25);
+            this.btnListar.Location = new System.Drawing.Point(233, 31);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(165, 40);
+            this.btnListar.Size = new System.Drawing.Size(170, 40);
             this.btnListar.TabIndex = 21;
             this.btnListar.Text = "Listar Facturas";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -61,9 +62,9 @@
             // btnListarPer
             // 
             this.btnListarPer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarPer.Location = new System.Drawing.Point(484, 25);
+            this.btnListarPer.Location = new System.Drawing.Point(423, 31);
             this.btnListarPer.Name = "btnListarPer";
-            this.btnListarPer.Size = new System.Drawing.Size(165, 40);
+            this.btnListarPer.Size = new System.Drawing.Size(170, 40);
             this.btnListarPer.TabIndex = 23;
             this.btnListarPer.Text = "Listar Personas";
             this.btnListarPer.UseVisualStyleBackColor = true;
@@ -99,11 +100,23 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(609, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 40);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Listar Proveedores";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.reportViewer1);
@@ -124,5 +137,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button button1;
     }
 }

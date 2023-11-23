@@ -215,5 +215,10 @@ namespace winUI
             newform.Show();
             this.Hide();
         }
+
+        private void btnAnularFac_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

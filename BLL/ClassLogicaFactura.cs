@@ -180,8 +180,5 @@ namespace BLL
             TipoPag = tipopag;
         }
     } 
-
-
-
 }
 

@@ -32,8 +32,8 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbIdPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbNoFactura = new System.Windows.Forms.TextBox();
@@ -51,6 +51,8 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnInhabilitar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnAnularFac = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +62,7 @@
             // 
             this.btnFactura.Enabled = false;
             this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactura.Location = new System.Drawing.Point(497, 99);
+            this.btnFactura.Location = new System.Drawing.Point(439, 28);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(137, 40);
             this.btnFactura.TabIndex = 29;
@@ -111,8 +113,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(381, 577);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 40);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Ver historial";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.btnAnularFac);
             this.groupBox2.Controls.Add(this.cbIdPago);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.tbNoFactura);
@@ -132,17 +147,6 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(381, 577);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 40);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Ver historial";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbIdPago
             // 
@@ -319,6 +323,26 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // btnAnularFac
+            // 
+            this.btnAnularFac.Enabled = false;
+            this.btnAnularFac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnularFac.Location = new System.Drawing.Point(591, 28);
+            this.btnAnularFac.Name = "btnAnularFac";
+            this.btnAnularFac.Size = new System.Drawing.Size(137, 40);
+            this.btnAnularFac.TabIndex = 34;
+            this.btnAnularFac.Text = "Anular Factura";
+            this.btnAnularFac.UseVisualStyleBackColor = true;
+            this.btnAnularFac.Click += new System.EventHandler(this.btnAnularFac_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(439, 74);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(289, 160);
+            this.listBox1.TabIndex = 35;
+            // 
             // formFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,5 +387,7 @@
         private System.Windows.Forms.ComboBox cbIdVen;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAnularFac;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
